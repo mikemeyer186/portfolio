@@ -1,0 +1,29 @@
+.menu-mobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100vw);
+  transition: all 250ms ease-in-out;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    line-height: 2em;
+  }
+}
+
+.slidedIn {
+  transform: translateX(0);
+}

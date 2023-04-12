@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-header-mobile',
@@ -13,10 +14,11 @@ export class HeaderMobileComponent {
     'assets/img/menu/menu_close.png',
   ];
   currentMenuImage: string = this.menuImages[0];
-  menuIsOpen: boolean = false;
+
+  constructor(public service: ServiceService) {}
 
   menuAnimation() {
-    if (!this.menuIsOpen) {
+    if (!this.service.menuIsOpen) {
       this.openMenu();
     } else {
       this.closeMenu();
@@ -30,7 +32,7 @@ export class HeaderMobileComponent {
       numberOfImage++;
       if (numberOfImage === this.menuImages.length) {
         clearInterval(openInterval);
-        this.menuIsOpen = true;
+        this.service.menuIsOpen = true;
       }
     }, 75);
   }
@@ -42,7 +44,7 @@ export class HeaderMobileComponent {
       numberOfImage--;
       if (numberOfImage === -1) {
         clearInterval(closeInterval);
-        this.menuIsOpen = false;
+        this.service.menuIsOpen = false;
       }
     }, 75);
   }

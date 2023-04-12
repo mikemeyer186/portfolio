@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
+import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderMobileComponent
+    HeaderMobileComponent,
+    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

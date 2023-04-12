@@ -1,5 +1,10 @@
 .header-mobile {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100vw;
   height: 110px;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
@@ -7,21 +12,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 125ms ease-in-out;
 
   .header-mobile-logo {
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   .header-mobile-menu {
-    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 
     img {
       width: 60px;
