@@ -1,4 +1,16 @@
 <div class="page-container">
-    <app-header-mobile></app-header-mobile>
-    <app-menu-mobile></app-menu-mobile>
+
+    <!-- header -->
+    <div class="header">
+        <app-header-mobile></app-header-mobile>
+    </div>
+
+    <!-- menu -->
+    <div class="menu-mobile" [class.slidedIn]="service.menuIsOpen">
+        <app-menu-mobile></app-menu-mobile>
+    </div>
+
+    <!-- main section -->
+    <app-main></app-main>
+
 </div>
