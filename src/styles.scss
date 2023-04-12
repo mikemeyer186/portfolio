@@ -4,6 +4,7 @@
   --main-bg-color: #141d2f;
   --main-txt-color: #ffffff;
   --offset-header: 110px;
+  --sub-text-blue: #4b47ff;
 }
 
 * {
@@ -25,4 +26,8 @@ html {
 
 body {
   background-color: var(--main-bg-color);
+}
+
+.transparent {
+  background-color: transparent !important;
 }
