@@ -5,9 +5,11 @@
   height: 100vh;
 
   .main-image {
+    position: relative;
+    top: 60px;
+
     .main-blue-bg {
-      width: 120%;
-      height: 60%;
+      width: 125%;
       transform: translateX(-10%);
       opacity: 0.7;
     }
@@ -16,9 +18,8 @@
       width: 100%;
       object-fit: cover;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
-      transform: translateY(10%);
       z-index: 1;
     }
 
@@ -26,7 +27,7 @@
       width: 120%;
       height: 50%;
       position: absolute;
-      bottom: 0;
+      bottom: -80px;
       left: 0;
       z-index: 2;
     }
@@ -34,7 +35,7 @@
 
   .main-header {
     position: absolute;
-    bottom: 18%;
+    bottom: 24%;
     left: -2%;
     width: 100%;
     z-index: 3;
@@ -54,7 +55,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      line-height: 2.6rem;
+      line-height: 2.7rem;
 
       .main-header-right-name {
         font-size: 3rem;
@@ -70,7 +71,7 @@
 
   .main-button {
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     left: 0;
     right: 0;
     z-index: 4;
@@ -96,7 +97,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 2%;
+    bottom: 8%;
     z-index: 5;
 
     .main-footer-mid {

@@ -34,7 +34,7 @@ export class HeaderMobileComponent {
         clearInterval(openInterval);
         this.service.menuIsOpen = true;
       }
-    }, 75);
+    }, 100);
   }
 
   closeMenu() {
@@ -46,6 +46,6 @@ export class HeaderMobileComponent {
         clearInterval(closeInterval);
         this.service.menuIsOpen = false;
       }
-    }, 75);
+    }, 100);
   }
 }
