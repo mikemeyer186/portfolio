@@ -9,6 +9,10 @@
   justify-content: center;
   overflow: hidden;
 
+  nav {
+    transform: translateY(-100px);
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
