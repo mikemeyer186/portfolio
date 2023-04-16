@@ -7,6 +7,7 @@ import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 import { MainComponent } from './main/main.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     HeaderMobileComponent,
     MenuMobileComponent,
     MainComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
