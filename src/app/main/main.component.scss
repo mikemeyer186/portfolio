@@ -6,40 +6,41 @@
 
   .main-image {
     position: relative;
-    top: 60px;
+    height: 60%;
 
     .main-blue-bg {
-      width: 125%;
-      transform: translateX(-10%);
+      height: 120%;
+      transform: translateX(-17%);
       opacity: 0.7;
     }
 
     .main-portrait {
-      width: 100%;
+      width: 420px;
       object-fit: cover;
       position: absolute;
-      bottom: 0;
-      left: 0;
+      top: 40px;
+      left: -12px;
       z-index: 1;
+    }
+
+    .main-dark-bg {
+      width: 170%;
+      height: 100%;
+      position: absolute;
+      top: 130px;
+      left: 0;
+      z-index: 2;
     }
   }
 
   .main-header {
     position: absolute;
-    bottom: 31%;
-    left: -2%;
+    bottom: 40px;
+    left: -10px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .main-dark-bg {
-      width: 120%;
-      position: absolute;
-      bottom: -115px;
-      left: 0;
-      z-index: 2;
-    }
 
     .main-header-left {
       color: #ffffff;
@@ -71,7 +72,7 @@
 
   .main-button {
     position: absolute;
-    bottom: 22%;
+    bottom: 240px;
     left: 0;
     right: 0;
     z-index: 4;
@@ -97,7 +98,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 13%;
+    bottom: 120px;
     z-index: 5;
 
     .main-footer-mid {
