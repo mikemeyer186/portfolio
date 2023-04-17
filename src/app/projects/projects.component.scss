@@ -1,0 +1,109 @@
+.projects-container {
+  position: relative;
+  height: 100vh;
+
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;
+    gap: 20px;
+
+    .header {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .rectangle {
+      width: 20px;
+      height: 4px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: var(--sub-text-blue);
+    }
+
+    .rectangle-right {
+      width: 75px;
+      height: 4px;
+      background-color: var(--sub-text-blue);
+    }
+  }
+  p {
+    padding: 0 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .projects-box {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .project-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 390px;
+        object-fit: cover;
+      }
+
+      .description-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transform: translateY(-50px);
+
+        .project-title {
+          font-size: 2rem;
+          font-weight: 700;
+          color: var(--sub-text-blue);
+        }
+
+        .project-stack {
+          width: 260px;
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: var(--sub-text-azure);
+        }
+
+        .project-description {
+          color: #ffffff;
+          text-align: center;
+        }
+
+        .button-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          .button-blue {
+            background-color: var(--sub-text-blue);
+            border-radius: 10px;
+            border: none;
+            width: 133px;
+            height: 49px;
+            color: #ffffff;
+            padding: 15px 30px;
+          }
+
+          .button-dark {
+            background-color: var(--main-bg-color);
+            border-radius: 10px;
+            border: 1px solid var(--sub-text-azure);
+            width: 133px;
+            height: 49px;
+            color: #ffffff;
+            padding: 15px 30px;
+          }
+        }
+      }
+    }
+  }
+}
