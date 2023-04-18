@@ -1,22 +1,21 @@
 <div class="projects-container">
+    <img class="bg-big-blue" src="assets/img/background/bg_big_blue.png">
     <div class="header-box">
         <div class="rectangle"></div>
         <span class="header">Portfolio</span>
         <div class="rectangle-right"></div>
     </div>
     <p>This page is a sample of my work - please feel free to try them out.</p>
-    <div class="projects-box">
+    <div *ngFor="let project of projects" class="projects-box">
         <div class="project-wrapper">
-            <img src="assets/img/content/join.png" alt="Project: Join">
+            <img src="assets/img/content/{{ project.image }}">
             <div class="description-box">
-                <span class="project-title">Join</span>
-                <span class="project-stack">Angular | TypeScript | HTML | CSS | Firebase </span>
-                <span class="project-description">Task manager inspired by the Kanban system. Create and organize tasks
-                    by
-                    using drag and drop functions and assign users and categories. </span>
+                <span class="project-title">{{ project.title }}</span>
+                <span class="project-stack">{{ project.stack }}</span>
+                <span class="project-description">{{ project.description }}</span>
                 <div class="button-box">
-                    <button class="button-blue">Live test</button>
-                    <button class="button-dark">Github</button>
+                    <a href="{{ project.link_live }}"><button class="button-blue">Live test</button></a>
+                    <a href="{{ project.link_git }}"><button class="button-dark">Github</button></a>
                 </div>
             </div>
         </div>
