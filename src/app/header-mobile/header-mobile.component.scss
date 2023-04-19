@@ -9,7 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 125ms ease-in-out;
+  transition: all 225ms ease;
+
+  .transparent {
+    background-color: transparent !important;
+  }
 
   .header-mobile-logo {
     height: 100%;

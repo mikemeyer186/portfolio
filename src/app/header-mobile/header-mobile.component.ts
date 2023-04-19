@@ -33,6 +33,7 @@ export class HeaderMobileComponent {
       if (numberOfImage === this.menuImages.length) {
         clearInterval(openInterval);
         this.service.menuIsOpen = true;
+        document.body.classList.add('no-scroll');
       }
     }, 75);
   }
@@ -45,6 +46,7 @@ export class HeaderMobileComponent {
       if (numberOfImage === -1) {
         clearInterval(closeInterval);
         this.service.menuIsOpen = false;
+        document.body.classList.remove('no-scroll');
       }
     }, 75);
   }

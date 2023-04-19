@@ -1,11 +1,11 @@
 <div class="menu-mobile">
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li (click)="scrollToTop()">Home</li>
+            <li (click)="scrollToElement('about')">About me</li>
+            <li (click)="scrollToElement('skills')">Skills</li>
+            <li (click)="scrollToElement('portfolio')">Portfolio</li>
+            <li (click)="scrollToElement('contact')">Contact</li>
         </ul>
     </nav>
 </div>
