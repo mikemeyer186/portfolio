@@ -8,4 +8,12 @@ import { ServiceService } from '../service.service';
 })
 export class HeaderMobileComponent {
   constructor(public service: ServiceService) {}
+
+  menuAnimation() {
+    if (!this.service.menuIsOpen) {
+      this.service.openMenu();
+    } else {
+      this.service.closeMenu();
+    }
+  }
 }

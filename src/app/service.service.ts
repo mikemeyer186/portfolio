@@ -15,14 +15,6 @@ export class ServiceService {
 
   constructor() {}
 
-  menuAnimation() {
-    if (!this.menuIsOpen) {
-      this.openMenu();
-    } else {
-      this.closeMenu();
-    }
-  }
-
   openMenu() {
     let numberOfImage: number = 0;
     const openInterval = setInterval(() => {

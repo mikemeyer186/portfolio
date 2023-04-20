@@ -8,4 +8,9 @@ import { ServiceService } from '../service.service';
 })
 export class FooterComponent {
   constructor(public service: ServiceService) {}
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+    document.body.classList.remove('no-scroll');
+  }
 }
