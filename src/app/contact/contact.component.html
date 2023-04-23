@@ -15,10 +15,12 @@
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['sender'] as sender">
                     <input formControlName="sender" type="text" placeholder="Your name">
-                    <ng-container>
-                        <div *ngIf="sender.invalid && sender.dirty">
-                            <span class="error-message">Your name is required</span>
-                        </div>
+                    <ng-container *ngIf="sender.invalid && sender.dirty">
+                        <span class="error-message">Your name is required</span>
+                        <img class="error-icon" src="assets/img/content/form_red.png">
+                    </ng-container>
+                    <ng-container *ngIf="sender.valid">
+                        <img class="check-icon" src="assets/img/content/form_green.png">
                     </ng-container>
                 </ng-container>
             </div>
@@ -26,10 +28,12 @@
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['email'] as email">
                     <input formControlName="email" type="email" placeholder="Your email">
-                    <ng-container>
-                        <div *ngIf="email.invalid && email.dirty">
-                            <span class="error-message">Your email is required</span>
-                        </div>
+                    <ng-container *ngIf="email.invalid && email.dirty">
+                        <span class="error-message">Your email is required</span>
+                        <img class="error-icon" src="assets/img/content/form_red.png">
+                    </ng-container>
+                    <ng-container *ngIf="email.valid">
+                        <img class="check-icon" src="assets/img/content/form_green.png">
                     </ng-container>
                 </ng-container>
             </div>
@@ -37,10 +41,12 @@
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['message'] as message">
                     <textarea formControlName="message" cols="30" rows="30" placeholder="Your message"></textarea>
-                    <ng-container>
-                        <div *ngIf="message.invalid && message.dirty">
-                            <span class="error-message">Your message is empty</span>
-                        </div>
+                    <ng-container *ngIf="message.invalid && message.dirty">
+                        <span class="error-message">Your message is empty</span>
+                        <img class="error-icon" src="assets/img/content/form_red.png">
+                    </ng-container>
+                    <ng-container *ngIf="message.valid">
+                        <img class="check-icon" src="assets/img/content/form_green.png">
                     </ng-container>
                 </ng-container>
             </div>

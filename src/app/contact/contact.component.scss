@@ -76,6 +76,24 @@
           padding-left: 10px;
           transition: all 225ms ease-in-out;
         }
+
+        .error-icon {
+          position: absolute;
+          width: 20px;
+          object-fit: cover;
+          right: 25px;
+          top: 10px;
+          transition: all 225ms ease-in-out;
+        }
+
+        .check-icon {
+          position: absolute;
+          width: 20px;
+          object-fit: cover;
+          right: 25px;
+          top: 10px;
+          transition: all 225ms ease-in-out;
+        }
       }
 
       input,
@@ -84,7 +102,6 @@
         height: 40px;
         border: 1px solid var(--sub-text-blue);
         border-radius: 10px;
-        padding: 0 10px;
         background-color: var(--bg-blue);
         color: #ffffff;
         outline: none;
