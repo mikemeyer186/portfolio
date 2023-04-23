@@ -14,7 +14,7 @@
 
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['sender'] as sender">
-                    <input formControlName="sender" type="text" placeholder="Your name">
+                    <input formControlName="sender" name="name" type="text" placeholder="Your name">
                     <ng-container *ngIf="sender.invalid && sender.dirty">
                         <span class="error-message">Your name is required</span>
                         <img class="error-icon" src="assets/img/content/form_red.png">
@@ -27,7 +27,7 @@
 
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['email'] as email">
-                    <input formControlName="email" type="email" placeholder="Your email">
+                    <input formControlName="email" name="email" type="email" placeholder="Your email">
                     <ng-container *ngIf="email.invalid && email.dirty">
                         <span class="error-message">Your email is required</span>
                         <img class="error-icon" src="assets/img/content/form_red.png">
@@ -40,7 +40,8 @@
 
             <div class="form-box">
                 <ng-container *ngIf="contactForm.controls['message'] as message">
-                    <textarea formControlName="message" cols="30" rows="30" placeholder="Your message"></textarea>
+                    <textarea formControlName="message" name="message" cols="30" rows="30"
+                        placeholder="Your message"></textarea>
                     <ng-container *ngIf="message.invalid && message.dirty">
                         <span class="error-message">Your message is empty</span>
                         <img class="error-icon" src="assets/img/content/form_red.png">
@@ -51,9 +52,13 @@
                 </ng-container>
             </div>
 
-            <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">Send
-                message</button>
-
+            <div class="form-box">
+                <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">Send
+                    message</button>
+                <ng-container *ngIf="this.mailSent">
+                    <span class="sent-message">Your message has been sent</span>
+                </ng-container>
+            </div>
         </form>
     </div>
 </div>
