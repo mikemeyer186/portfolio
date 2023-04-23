@@ -7,8 +7,8 @@
     </div>
     <div class="form-wrapper">
         <span class="form-header">Got a problem to solve?</span>
-        <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
-            projects with my work.</p>
+        <p>Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to
+            your projects with my work.</p>
 
         <form [formGroup]="contactForm" (submit)="sendMail()">
 
@@ -53,8 +53,12 @@
             </div>
 
             <div class="form-box">
-                <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">Send
-                    message</button>
+                <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">
+                    <span *ngIf="!this.sendAnimation">Send message</span>
+                    <div class="load-spinner" *ngIf="this.sendAnimation">
+                        <div class="load-spinner-inner"></div>
+                    </div>
+                </button>
                 <ng-container *ngIf="this.mailSent">
                     <span class="sent-message">Your message has been sent</span>
                 </ng-container>

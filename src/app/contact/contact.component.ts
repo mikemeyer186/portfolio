@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent {
   public mailSent: boolean = false;
+  public sendAnimation: boolean = false;
   public contactForm: FormGroup = new FormGroup({
     sender: new FormControl('', [Validators.required, Validators.minLength(1)]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -18,7 +19,7 @@ export class ContactComponent {
   });
 
   async sendMail() {
-    this.mailSent = true;
+    this.sendMailAnimation();
     const sender: string = this.contactForm.value.sender;
     const email: string = this.contactForm.value.email;
     const message: string = this.contactForm.value.message;
@@ -31,7 +32,15 @@ export class ContactComponent {
       method: 'POST',
       body: formData,
     });
+  }
 
-    this.contactForm.reset();
+  sendMailAnimation() {
+    this.sendAnimation = true;
+
+    setTimeout(() => {
+      this.mailSent = true;
+      this.sendAnimation = false;
+      this.contactForm.reset();
+    }, 2000);
   }
 }
