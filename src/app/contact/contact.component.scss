@@ -61,6 +61,23 @@
       width: 100%;
       gap: 40px;
 
+      .form-box {
+        width: 100%;
+        position: relative;
+
+        .error-message {
+          width: 100%;
+          color: #e61c40;
+          font-size: 0.7rem;
+          font-weight: 300;
+          position: absolute;
+          left: 0;
+          bottom: -20px;
+          padding-left: 10px;
+          transition: all 225ms ease-in-out;
+        }
+      }
+
       input,
       textarea {
         width: 100%;
@@ -72,14 +89,35 @@
         color: #ffffff;
         outline: none;
         padding: 15px 25px;
+        transition: all 225ms ease-in-out;
 
         &::placeholder {
           color: #ffffff;
           font-family: "Poppins", sans-serif;
         }
+
+        &:focus,
+        &:hover {
+          border: 1px solid var(--sub-text-azure);
+        }
+
+        &.ng-dirty {
+          border: 1px solid #e61c40;
+        }
+
+        &.untouched,
+        &.pristine {
+          border: 1px solid var(--sub-text-blue);
+        }
+
+        &.ng-valid {
+          border: 1px solid #70e61c;
+        }
       }
 
       textarea {
+        font-family: "Poppins", sans-serif;
+        display: block;
         resize: none;
         height: 160px;
       }
@@ -93,6 +131,12 @@
         color: #ffffff;
         padding: 15px;
         font-size: 18px;
+        transition: all 225ms ease-in-out;
+      }
+
+      .disabledBtn {
+        background-color: #00bee856;
+        color: #ffffff82;
       }
     }
   }
