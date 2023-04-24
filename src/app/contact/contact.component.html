@@ -11,58 +11,59 @@
             your projects with my work.</p>
 
         <form [formGroup]="contactForm" (submit)="sendMail()">
+            <fieldset [disabled]="this.sendAnimation">
+                <div class="form-box">
+                    <ng-container *ngIf="contactForm.controls['sender'] as sender">
+                        <input formControlName="sender" name="name" type="text" placeholder="Your name">
+                        <ng-container *ngIf="sender.invalid && sender.dirty">
+                            <span class="error-message">Your name is required</span>
+                            <img class="error-icon" src="assets/img/content/form_red.png">
+                        </ng-container>
+                        <ng-container *ngIf="sender.valid">
+                            <img class="check-icon" src="assets/img/content/form_green.png">
+                        </ng-container>
+                    </ng-container>
+                </div>
 
-            <div class="form-box">
-                <ng-container *ngIf="contactForm.controls['sender'] as sender">
-                    <input formControlName="sender" name="name" type="text" placeholder="Your name">
-                    <ng-container *ngIf="sender.invalid && sender.dirty">
-                        <span class="error-message">Your name is required</span>
-                        <img class="error-icon" src="assets/img/content/form_red.png">
+                <div class="form-box">
+                    <ng-container *ngIf="contactForm.controls['email'] as email">
+                        <input formControlName="email" name="email" type="email" placeholder="Your email">
+                        <ng-container *ngIf="email.invalid && email.dirty">
+                            <span class="error-message">Your email is required</span>
+                            <img class="error-icon" src="assets/img/content/form_red.png">
+                        </ng-container>
+                        <ng-container *ngIf="email.valid">
+                            <img class="check-icon" src="assets/img/content/form_green.png">
+                        </ng-container>
                     </ng-container>
-                    <ng-container *ngIf="sender.valid">
-                        <img class="check-icon" src="assets/img/content/form_green.png">
-                    </ng-container>
-                </ng-container>
-            </div>
+                </div>
 
-            <div class="form-box">
-                <ng-container *ngIf="contactForm.controls['email'] as email">
-                    <input formControlName="email" name="email" type="email" placeholder="Your email">
-                    <ng-container *ngIf="email.invalid && email.dirty">
-                        <span class="error-message">Your email is required</span>
-                        <img class="error-icon" src="assets/img/content/form_red.png">
+                <div class="form-box">
+                    <ng-container *ngIf="contactForm.controls['message'] as message">
+                        <textarea formControlName="message" name="message" cols="30" rows="30"
+                            placeholder="Your message"></textarea>
+                        <ng-container *ngIf="message.invalid && message.dirty">
+                            <span class="error-message">Your message is empty</span>
+                            <img class="error-icon" src="assets/img/content/form_red.png">
+                        </ng-container>
+                        <ng-container *ngIf="message.valid">
+                            <img class="check-icon" src="assets/img/content/form_green.png">
+                        </ng-container>
                     </ng-container>
-                    <ng-container *ngIf="email.valid">
-                        <img class="check-icon" src="assets/img/content/form_green.png">
-                    </ng-container>
-                </ng-container>
-            </div>
+                </div>
 
-            <div class="form-box">
-                <ng-container *ngIf="contactForm.controls['message'] as message">
-                    <textarea formControlName="message" name="message" cols="30" rows="30"
-                        placeholder="Your message"></textarea>
-                    <ng-container *ngIf="message.invalid && message.dirty">
-                        <span class="error-message">Your message is empty</span>
-                        <img class="error-icon" src="assets/img/content/form_red.png">
+                <div class="form-box">
+                    <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">
+                        <span *ngIf="!this.sendAnimation">Send message</span>
+                        <div class="load-spinner" *ngIf="this.sendAnimation">
+                            <div class="load-spinner-inner"></div>
+                        </div>
+                    </button>
+                    <ng-container *ngIf="this.mailSent">
+                        <span class="sent-message">Your message has been sent</span>
                     </ng-container>
-                    <ng-container *ngIf="message.valid">
-                        <img class="check-icon" src="assets/img/content/form_green.png">
-                    </ng-container>
-                </ng-container>
-            </div>
-
-            <div class="form-box">
-                <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">
-                    <span *ngIf="!this.sendAnimation">Send message</span>
-                    <div class="load-spinner" *ngIf="this.sendAnimation">
-                        <div class="load-spinner-inner"></div>
-                    </div>
-                </button>
-                <ng-container *ngIf="this.mailSent">
-                    <span class="sent-message">Your message has been sent</span>
-                </ng-container>
-            </div>
+                </div>
+            </fieldset>
         </form>
     </div>
 </div>

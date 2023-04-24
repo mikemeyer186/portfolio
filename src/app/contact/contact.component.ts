@@ -26,7 +26,7 @@ export class ContactComponent {
     let formData: FormData = new FormData();
     formData.append('name', sender);
     formData.append('email', email);
-    formData.append('message', message);
+    formData.append('message', message.toString());
 
     await fetch('https://mike-meyer.dev/send_mail/send_mail.php', {
       method: 'POST',

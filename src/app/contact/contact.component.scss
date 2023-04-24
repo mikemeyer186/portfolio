@@ -61,6 +61,16 @@
       width: 100%;
       gap: 40px;
 
+      fieldset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        border: none;
+      }
+
       .form-box {
         width: 100%;
         display: flex;
@@ -121,7 +131,7 @@
         background-color: var(--bg-blue);
         color: #ffffff;
         outline: none;
-        padding: 15px 25px;
+        padding: 15px 60px 15px 25px;
         transition: all 225ms ease-in-out;
 
         &::placeholder {
