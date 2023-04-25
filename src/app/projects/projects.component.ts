@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
+  ngOnInit() {
+    AOS.init();
+  }
+
   projects = [
     {
       title: 'Join',

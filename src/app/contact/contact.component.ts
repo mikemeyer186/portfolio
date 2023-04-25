@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,10 @@ export class ContactComponent {
       Validators.minLength(1),
     ]),
   });
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   async sendMail() {
     this.sendMailAnimation();
