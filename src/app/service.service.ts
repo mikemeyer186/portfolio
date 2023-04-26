@@ -12,6 +12,7 @@ export class ServiceService {
     'assets/img/menu/menu_close.png',
   ];
   currentMenuImage: string = this.menuImages[0];
+  legalPageIsOpen: boolean = false;
 
   constructor() {}
 
@@ -42,22 +43,49 @@ export class ServiceService {
   }
 
   scrollToTop() {
+    this.legalPageIsOpen = false;
     window.scrollTo(0, 0);
     this.closeMenu();
     document.body.classList.remove('no-scroll');
   }
 
   scrollToElement(element: string) {
-    const elementToScroll = document.getElementById(element);
-    this.closeMenu();
-    document.body.classList.remove('no-scroll');
+    this.legalPageIsOpen = false;
 
-    if (elementToScroll) {
-      elementToScroll.scrollIntoView({
-        behavior: 'smooth',
+    setTimeout(() => {
+      this.smoothScrollAnimation(element);
+    }, 100);
+  }
+
+  smoothScrollAnimation(element: string) {
+    const elementToScroll = document.getElementById(element);
+    document.body.classList.remove('no-scroll');
+    this.closeMenu();
+    this.scrollIntoView(elementToScroll, 'smooth');
+  }
+
+  scrollIntoView(element: any, behavior: string) {
+    if (element) {
+      element.scrollIntoView({
+        behavior: behavior,
         block: 'start',
         inline: 'nearest',
       });
     }
+  }
+
+  openLegalPage() {
+    this.legalPageIsOpen = true;
+
+    setTimeout(() => {
+      this.scrollToLegalTop();
+    }, 100);
+  }
+
+  scrollToLegalTop() {
+    const legalElement = document.getElementById('legal');
+    document.body.classList.remove('no-scroll');
+    this.closeMenu();
+    this.scrollIntoView(legalElement, 'auto');
   }
 }

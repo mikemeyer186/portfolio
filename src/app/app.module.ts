@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LegalComponent } from './legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    LegalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
