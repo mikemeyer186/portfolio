@@ -10,7 +10,7 @@ export class FooterComponent {
   constructor(public service: ServiceService) {}
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     document.body.classList.remove('no-scroll');
   }
 }
