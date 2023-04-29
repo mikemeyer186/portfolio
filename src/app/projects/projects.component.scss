@@ -1,6 +1,5 @@
 .projects-container {
   position: relative;
-  padding-bottom: 100px;
   padding-top: 80px;
 
   .bg-big-blue {
@@ -102,6 +101,9 @@
           }
 
           .button-blue {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: var(--sub-text-blue);
             border-radius: 10px;
             border: none;
@@ -114,6 +116,9 @@
           }
 
           .button-dark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: var(--main-bg-color);
             border-radius: 10px;
             border: 1px solid var(--sub-text-azure);
