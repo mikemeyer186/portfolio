@@ -5,7 +5,8 @@
         <span class="header">Portfolio</span>
         <div class="rectangle-right"></div>
     </div>
-    <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">This page is a sample of my work -
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine" translate>This page is a sample of my
+        work -
         please feel free to try them out.</p>
     <div *ngFor="let project of projects" class="projects-box">
         <div class="project-wrapper">
@@ -14,7 +15,8 @@
             <div class="description-box">
                 <span class="project-title">{{ project.title }}</span>
                 <span class="project-stack">{{ project.stack }}</span>
-                <span class="project-description">{{ project.description }}</span>
+                <span *ngIf="this.service.langEnglish" class="project-description">{{ project.description.en }}</span>
+                <span *ngIf="!this.service.langEnglish" class="project-description">{{ project.description.de }}</span>
                 <div class="button-box">
                     <a href="{{ project.link_live }}" target="_blank"><button class="button-blue">Live test</button></a>
                     <a href="{{ project.link_git }}" target="_blank"><button class="button-dark">Github</button></a>

@@ -3,13 +3,13 @@
     <img class="bg-big-blue" src="assets/img/background/bg_big_blue.png">
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="header-box">
         <div class="rectangle"></div>
-        <span id="contact" class="header">Contact</span>
+        <span id="contact" class="header" translate>Contact</span>
     </div>
     <div class="form-wrapper">
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-            <span class="form-header">Got a
+            <span class="form-header" translate>Got a
                 problem to solve?</span>
-            <p>Contact me through this form. I am
+            <p translate>Contact me through this form. I am
                 interested in hearing you, knowing your ideas and contributing to
                 your projects with my work.</p>
         </div>
@@ -18,9 +18,12 @@
             <fieldset [disabled]="this.sendAnimation">
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['sender'] as sender">
-                        <input formControlName="sender" name="name" type="text" placeholder="Your name">
+                        <input *ngIf="this.service.langEnglish" formControlName="sender" name="name" type="text"
+                            placeholder="Your name">
+                        <input *ngIf="!this.service.langEnglish" formControlName="sender" name="name" type="text"
+                            placeholder="Ihr Name">
                         <ng-container *ngIf="sender.invalid && sender.dirty">
-                            <span class="error-message">Your name is required</span>
+                            <span class="error-message" translate>Your name is required</span>
                             <img class="error-icon" src="assets/img/content/form_red.png">
                         </ng-container>
                         <ng-container *ngIf="sender.valid">
@@ -31,9 +34,12 @@
 
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['email'] as email">
-                        <input formControlName="email" name="email" type="email" placeholder="Your email">
+                        <input *ngIf="this.service.langEnglish" formControlName="email" name="email" type="email"
+                            placeholder="Your email">
+                        <input *ngIf="!this.service.langEnglish" formControlName="email" name="email" type="email"
+                            placeholder="Ihre Email-Adresse">
                         <ng-container *ngIf="email.invalid && email.dirty">
-                            <span class="error-message">Your email is required</span>
+                            <span class="error-message" translate>Your email is required</span>
                             <img class="error-icon" src="assets/img/content/form_red.png">
                         </ng-container>
                         <ng-container *ngIf="email.valid">
@@ -44,10 +50,12 @@
 
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['message'] as message">
-                        <textarea formControlName="message" name="message" cols="30" rows="30"
-                            placeholder="Your message"></textarea>
+                        <textarea *ngIf="this.service.langEnglish" formControlName="message" name="message" cols="30"
+                            rows="30" placeholder="Your message"></textarea>
+                        <textarea *ngIf="!this.service.langEnglish" formControlName="message" name="message" cols="30"
+                            rows="30" placeholder="Ihre Nachricht"></textarea>
                         <ng-container *ngIf="message.invalid && message.dirty">
-                            <span class="error-message">Your message is empty</span>
+                            <span class="error-message" translate>Your message is empty</span>
                             <img class="error-icon" src="assets/img/content/form_red.png">
                         </ng-container>
                         <ng-container *ngIf="message.valid">
@@ -58,13 +66,13 @@
 
                 <div class="form-box">
                     <button [disabled]="!contactForm.valid" [class.disabledBtn]="!contactForm.valid" type="submit">
-                        <span *ngIf="!this.sendAnimation">Send message</span>
+                        <span *ngIf="!this.sendAnimation" translate>Send message</span>
                         <div class="load-spinner" *ngIf="this.sendAnimation">
                             <div class="load-spinner-inner"></div>
                         </div>
                     </button>
                     <ng-container *ngIf="this.mailSent">
-                        <span class="sent-message">Your message has been sent</span>
+                        <span class="sent-message" translate>Your message has been sent</span>
                     </ng-container>
                 </div>
             </fieldset>

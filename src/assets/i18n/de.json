@@ -1,8 +1,22 @@
 {
-  "Let's talk!": "Kontaktiere mich",
-  "Home": "Start",
   "About me": "Über mich",
-  "Portfolio": "Portfolio",
+  "I am a passionated frontend developer with experience in developing responsive web applications. In my projects, I place a strong emphasis on modern user experience and clean code. As an IT enthusiast, I am open to the latest technologies and trends and always keep my knowledge up to date.": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit Erfahrung in der Entwicklung von responsiven Web-Apps. Bei meinen Projekten lege ich großen Wert auf eine moderne User Experience und sauberen Code. Als IT-Enthusiast bin ich offen für die neuesten Technologien und Trends und halte mein Wissen immer auf dem neuesten Stand.",
+  "Throughout my career as a business administrator with focus on IT, I gained extensive experience in data engineering and worked on numerous IT-projects where software was implemented. Therefore, I am very familiar with the customer requirements in software development.": "Während meiner beruflichen Laufbahn als Fachwirt mit Schwerpunkt IT habe ich umfangreiche Erfahrungen im Bereich Data Engineering gesammelt und an zahlreichen IT-Projekten mitgearbeitet, in denen Software implementiert wurde. Daher bin ich mit den Kundenanforderungen in der Softwareentwicklung bestens vertraut.",
+  "I acquired my developer skills at \"Developer Akademie\" in Munich. There, I gained experience in the web stack and the use of frameworks, libraries and APIs through many projects. Additionally, I learned an agile and team-oriented work approach based on the Scrum method.": "Meine Entwickler-Skills habe ich an der Developer Akademie in München erworben. Dort habe ich in vielen Projekten den Web-Stack erlernt und Erfahrungen mit dem Einsatz von Frameworks, Libraries und APIs gesammelt. Dabei eignete ich mir auch eine agile und teamorientierte Arbeitsweise auf Basis der Scrum-Methode an.",
   "Contact": "Kontakt",
-  "Legal notice": "Impressum"
+  "Got a problem to solve?": "Wie kann ich in Ihren Projekten unterstützen?",
+  "Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+  "Your name is required": "Bitte geben Sie Ihren Namen ein",
+  "Your email is required": "Bite geben Sie Ihre E-Mail-Adresse ein",
+  "Your message is empty": "Bitte geben Sie eine Nachricht ein",
+  "Send message": "Nachricht senden",
+  "Your message has been sent": "Ihre Nachricht wurde gesendet",
+  "Legal notice": "Impressum",
+  "Legal notice and data-protection": "Impressum und Datenschutz",
+  "Let's talk!": "Nachricht senden",
+  "Home": "Start",
+  "Portfolio": "Portfolio",
+  "This page is a sample of my work - please feel free to try them out.": "Hier sind einige Beispiele meiner Projekte - probieren Sie sie gerne aus.",
+  "I have gained experience in building projects with various front end technologies and concepts.": "Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+  "Get in touch": "Kontaktieren"
 }

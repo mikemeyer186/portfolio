@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as AOS from 'aos';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,7 @@ import * as AOS from 'aos';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  constructor(public service: ServiceService) {}
   public mailSent: boolean = false;
   public sendAnimation: boolean = false;
   public contactForm: FormGroup = new FormGroup({
