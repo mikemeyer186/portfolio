@@ -13,6 +13,7 @@ export class ServiceService {
   ];
   currentMenuImage: string = this.menuImages[0];
   legalPageIsOpen: boolean = false;
+  langEnglish: boolean = true;
 
   constructor() {}
 
