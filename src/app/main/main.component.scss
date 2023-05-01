@@ -36,6 +36,7 @@
       }
       @media (min-width: 768px) {
         top: 72px;
+        width: 460px;
       }
     }
 
@@ -49,7 +50,7 @@
 
       @media (min-width: 768px) {
         height: 90%;
-        top: 130px;
+        top: 160px;
       }
     }
   }
@@ -208,6 +209,14 @@
     top: 600px;
     z-index: 5;
 
+    @media (max-height: 800px) {
+      top: 500px;
+    }
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
     .main-footer-mid {
       display: flex;
       justify-content: center;
@@ -233,6 +242,27 @@
       @media (max-width: 300px) {
         width: 24px;
       }
+      @media (min-width: 768px) {
+        width: 96px;
+      }
+    }
+  }
+
+  .scroll-down-info {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-txt-color);
+    font-weight: 300;
+    gap: 10px;
+    cursor: pointer;
+
+    img {
+      transform: rotate(270deg);
     }
   }
 }
