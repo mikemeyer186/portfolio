@@ -1,8 +1,7 @@
 .contact-container {
   position: relative;
-  height: 100vh;
   padding-top: 80px;
-  margin-bottom: 100px;
+  margin-bottom: 190px;
 
   .bg-big-light {
     position: absolute;
@@ -69,6 +68,7 @@
         width: 100%;
         gap: 40px;
         border: none;
+        padding: 0;
       }
 
       .form-box {

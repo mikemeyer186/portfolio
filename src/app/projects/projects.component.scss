@@ -49,16 +49,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     .project-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 100%;
 
       img {
         width: 390px;
         object-fit: cover;
+
+        @media (max-width: 400px) {
+          width: 100%;
+        }
       }
 
       .description-box {
@@ -68,11 +74,14 @@
         justify-content: center;
         gap: 20px;
         transform: translateY(-50px);
+        width: 100%;
 
         .project-title {
           font-size: 2rem;
           font-weight: 700;
           color: var(--sub-text-blue);
+          width: 100%;
+          text-align: center;
         }
 
         .project-stack {
@@ -81,11 +90,13 @@
           font-weight: 400;
           color: var(--sub-text-azure);
           text-align: center;
+          width: 100%;
         }
 
         .project-description {
           color: #ffffff;
           text-align: center;
+          width: 100%;
         }
 
         .button-box {
@@ -93,6 +104,10 @@
           align-items: center;
           justify-content: space-between;
           gap: 20px;
+
+          @media (max-width: 350px) {
+            flex-direction: column;
+          }
 
           a {
             text-decoration: none;

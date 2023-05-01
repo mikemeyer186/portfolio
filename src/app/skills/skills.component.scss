@@ -2,7 +2,6 @@
   position: relative;
   padding: 0 0 0 30px;
   padding-top: 80px;
-  height: 100vh;
 
   .bg-azure {
     position: absolute;
@@ -61,6 +60,12 @@
       img {
         height: 45px;
         object-fit: cover;
+      }
+
+      span {
+        @media (max-width: 330px) {
+          font-size: 0.7rem;
+        }
       }
     }
   }
