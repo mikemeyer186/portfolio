@@ -13,6 +13,11 @@
       height: 120%;
       transform: translateX(-189px);
       opacity: 0.7;
+
+      @media (min-width: 768px) {
+        height: 150%;
+        top: 0px;
+      }
     }
 
     .main-portrait {
@@ -29,6 +34,9 @@
       @media (max-width: 300px) {
         left: -62px;
       }
+      @media (min-width: 768px) {
+        top: 72px;
+      }
     }
 
     .main-dark-bg {
@@ -38,6 +46,11 @@
       top: 70px;
       left: 0;
       z-index: 2;
+
+      @media (min-width: 768px) {
+        height: 90%;
+        top: 130px;
+      }
     }
   }
 
@@ -50,6 +63,18 @@
     justify-content: center;
     align-items: center;
 
+    @media (min-width: 768px) {
+      top: 100px;
+      left: 350px;
+      justify-content: flex-start;
+    }
+    @media (min-width: 960px) {
+      left: 400px;
+    }
+    @media (min-width: 1060px) {
+      left: 450px;
+    }
+
     .main-header-left {
       color: #ffffff;
       transform: rotate(270deg);
@@ -61,6 +86,12 @@
       }
       @media (max-width: 300px) {
         font-size: 1rem;
+      }
+      @media (min-width: 868px) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 993px) {
+        font-size: 3rem;
       }
     }
 
@@ -79,6 +110,12 @@
       @media (max-width: 300px) {
         line-height: 1.5rem;
       }
+      @media (min-width: 868px) {
+        line-height: 3rem;
+      }
+      @media (min-width: 993px) {
+        line-height: 3.5rem;
+      }
 
       .main-header-right-name {
         font-size: 3rem;
@@ -89,6 +126,12 @@
         }
         @media (max-width: 300px) {
           font-size: 1.5rem;
+        }
+        @media (min-width: 868px) {
+          font-size: 3.5rem;
+        }
+        @media (min-width: 993px) {
+          font-size: 4rem;
         }
       }
 
@@ -102,21 +145,48 @@
         @media (max-width: 300px) {
           font-size: 1rem;
         }
+        @media (min-width: 868px) {
+          font-size: 2.5rem;
+        }
+        @media (min-width: 993px) {
+          font-size: 3rem;
+        }
       }
     }
   }
 
   .main-button {
     position: absolute;
+    width: 100%;
     top: 500px;
     left: 0;
-    right: 0;
     z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @media (min-width: 768px) {
+      top: 230px;
+      left: 484px;
+      justify-content: flex-start;
+    }
+    @media (min-width: 868px) {
+      left: 530px;
+    }
+    @media (min-width: 960px) {
+      left: 580px;
+    }
+    @media (min-width: 993px) {
+      left: 634px;
+      top: 245px;
+    }
+    @media (min-width: 1060px) {
+      left: 670px;
+      top: 250px;
+    }
+
     button {
+      cursor: pointer;
       background-color: #00bee8;
       border-radius: 10px;
       border: none;

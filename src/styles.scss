@@ -25,7 +25,22 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: var(--main-bg-color);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--main-bg-color);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(#4b47ff, 0.3);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(#4b47ff, 0.5);
+  }
 }
 
 .transparent {
