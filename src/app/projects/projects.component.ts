@@ -17,13 +17,13 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Join',
-      stack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      stack: 'Angular | TypeScript | HTML | CSS',
       description: {
         en: 'Task manager inspired by the Kanban system. Create and organize tasks by drag and drop, assign other users, set due dates and manage your contacts.',
         de: 'Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag and Drop, weise Aufgaben Benutzern zu, setze Fälligkeitsdaten und verwalte deine Kontakte.',
       },
       image: 'join.png',
-      link_live: '',
+      link_live: 'https://join.mike-meyer.dev/index.html',
       link_git: 'https://github.com/mikemeyer186/join',
     },
     {
@@ -34,7 +34,7 @@ export class ProjectsComponent {
         de: 'Ein einfaches Jump-and-Run Spiel, dass auf einem objektorientierten Ansatz basiert. Hilf Sharkie dabei, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.',
       },
       image: 'sharkie.png',
-      link_live: '',
+      link_live: 'https://sharkie.mike-meyer.dev/index.html',
       link_git: 'https://github.com/mikemeyer186/sharkie',
     },
     {
@@ -45,7 +45,7 @@ export class ProjectsComponent {
         de: 'Digitale Version des beliebten Kartenspiels. Spiele es mit deinen Freunden online auf mehreren Geräten gleichzeitig.',
       },
       image: 'ringoffire.png',
-      link_live: '',
+      link_live: 'https://ringoffire.mike-meyer.dev/',
       link_git: 'https://github.com/mikemeyer186/ringoffire',
     },
   ];
