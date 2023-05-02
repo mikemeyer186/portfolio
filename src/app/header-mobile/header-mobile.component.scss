@@ -74,6 +74,37 @@
           color: var(--sub-text-blue);
         }
       }
+
+      .langBox {
+        color: #ffffff;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+
+        .lang {
+          color: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+          &:hover {
+            text-shadow: 0 0 10px #ffffff;
+          }
+          transition: all 125ms ease-in-out;
+        }
+
+        .activeLanguage {
+          color: var(--sub-text-azure);
+          transition: all 125ms ease-in-out;
+          pointer-events: none;
+        }
+
+        .rectangle {
+          background-color: #ffffff;
+          width: 20px;
+          height: 1px;
+        }
+      }
     }
   }
 }

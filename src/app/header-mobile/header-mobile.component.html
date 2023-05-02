@@ -12,11 +12,13 @@
             <span (click)="service.scrollToElement('portfolio')" translate>Portfolio</span>
             <span (click)="service.scrollToElement('contact')" translate>Contact</span>
             <span (click)="service.openLegalPage()" translate>Legal notice</span>
+            <div class="langBox">
+                <span (click)="changeLanguage('en')" class="lang"
+                    [class.activeLanguage]="this.service.langEnglish">EN</span>
+                <span class="rectangle"></span>
+                <span (click)="changeLanguage('de')" class="lang"
+                    [class.activeLanguage]="!this.service.langEnglish">DE</span>
+            </div>
         </nav>
-        <!--div class="langBox">
-            <span (click)="changeLanguage('en')" class="lang" [class.activeLanguage]="this.service.langEnglish">EN</span>
-            <span>|</span>
-            <span (click)="changeLanguage('de')" class="lang" [class.activeLanguage]="!this.service.langEnglish">DE</span>
-        </div-->
     </div>
 </div>
