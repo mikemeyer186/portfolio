@@ -67,6 +67,7 @@
 
       @media (min-width: 768px) {
         grid-template-columns: repeat(5, 1fr);
+        row-gap: 60px;
       }
 
       .skills-icons-box {
