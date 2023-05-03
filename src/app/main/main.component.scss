@@ -7,6 +7,10 @@
     position: relative;
     height: 650px;
 
+    @media (min-width: 768px) {
+      height: 570px;
+    }
+
     .main-blue-bg {
       position: absolute;
       top: 20px;
@@ -49,8 +53,8 @@
 
       @media (min-width: 768px) {
         width: 120%;
-        height: 80%;
-        top: 260px;
+        height: 90%;
+        top: 220px;
       }
     }
   }
@@ -180,7 +184,7 @@
     z-index: 5;
 
     @media (max-height: 800px) and (min-width: 768px) {
-      top: 500px;
+      top: 470px;
     }
     @media (min-width: 768px) {
       justify-content: flex-start;

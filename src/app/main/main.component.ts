@@ -46,10 +46,10 @@ export class MainComponent {
   changesStyleOfImage(backgroundImage: HTMLElement) {
     this.bgHeight = 120;
     this.bgInterval = setInterval(() => {
-      if (this.bgHeight < 1400) {
+      if (this.bgHeight < 1600) {
         this.bgHeight++;
         backgroundImage.style.height = this.bgHeight + 'px';
       }
-    }, 1000 / 60);
+    }, 1000 / 120);
   }
 }
