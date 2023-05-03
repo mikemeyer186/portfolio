@@ -3,6 +3,10 @@
   padding: 0 0 0 30px;
   padding-top: 80px;
 
+  @media (min-width: 768px) {
+    padding: 0 0 0 60px;
+  }
+
   .bg-azure {
     position: absolute;
     height: 500px;
@@ -30,6 +34,10 @@
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       background-color: var(--sub-text-blue);
+
+      @media (min-width: 768px) {
+        width: 32px;
+      }
     }
   }
 
@@ -40,19 +48,33 @@
     flex-direction: column;
     gap: 30px;
 
+    @media (min-width: 768px) {
+      padding-right: 52px;
+    }
+
     p {
       text-align: end;
     }
 
     .skills-icons {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-content: center;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      justify-items: center;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
 
       .skills-icons-box {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        align-self: center;
         gap: 10px;
         width: 75px;
       }
@@ -76,6 +98,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: 768px) {
+      padding-right: 0;
+    }
 
     button {
       background-color: #00bee8;

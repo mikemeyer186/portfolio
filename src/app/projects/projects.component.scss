@@ -35,6 +35,10 @@
       width: 75px;
       height: 4px;
       background-color: var(--sub-text-blue);
+
+      @media (min-width: 768px) {
+        width: 32px;
+      }
     }
   }
   p {
@@ -75,6 +79,10 @@
         gap: 20px;
         transform: translateY(-50px);
         width: 100%;
+
+        @media (min-width: 768px) {
+          width: 60%;
+        }
 
         .project-title {
           font-size: 2rem;
