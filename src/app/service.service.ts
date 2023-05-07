@@ -51,11 +51,12 @@ export class ServiceService {
   }
 
   scrollToElement(element: string) {
+    this.setLegalOpacity();
     this.legalPageIsOpen = false;
 
     setTimeout(() => {
       this.smoothScrollAnimation(element);
-    }, 100);
+    }, 50);
   }
 
   smoothScrollAnimation(element: string) {
@@ -77,10 +78,10 @@ export class ServiceService {
 
   openLegalPage() {
     this.legalPageIsOpen = true;
-
     setTimeout(() => {
+      this.setLegalOpacity();
       this.scrollToLegalTop();
-    }, 100);
+    }, 50);
   }
 
   scrollToLegalTop() {
@@ -88,5 +89,14 @@ export class ServiceService {
     document.body.classList.remove('no-scroll');
     this.closeMenu();
     this.scrollIntoView(legalElement, 'auto');
+  }
+
+  setLegalOpacity() {
+    const legalPage: HTMLElement | null = document.getElementById('legal-page');
+    if (this.legalPageIsOpen && legalPage) {
+      legalPage.classList.remove('legal-opacity-0');
+    } else if (!this.legalPageIsOpen && legalPage) {
+      legalPage.classList.add('legal-opacity-0');
+    }
   }
 }
