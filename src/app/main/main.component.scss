@@ -183,10 +183,8 @@
     top: 600px;
     z-index: 5;
 
-    @media (max-height: 800px) and (min-width: 768px) {
-      top: 470px;
-    }
     @media (min-width: 768px) {
+      top: 470px;
       justify-content: flex-start;
       gap: 30px;
     }
@@ -217,7 +215,16 @@
         width: 24px;
       }
       @media (min-width: 768px) {
-        width: 96px;
+        width: 50px;
+      }
+      @media (min-width: 1024px) {
+        width: 70px;
+      }
+      @media (min-width: 1200px) {
+        width: 100px;
+      }
+      @media (min-width: 1400px) {
+        width: 130px;
       }
     }
   }
@@ -237,6 +244,16 @@
 
     @media (min-width: 768px) {
       display: flex;
+      right: 20px;
+    }
+    @media (min-width: 1024px) {
+      right: 40px;
+    }
+    @media (min-width: 1200px) {
+      right: 70px;
+    }
+    @media (min-width: 1400px) {
+      right: 100px;
     }
 
     img {

@@ -12,7 +12,7 @@
     <div *ngFor="let project of projects; let odd = odd" class="projects-box">
         <div class="project-wrapper" [class.odd-child]="odd">
             <img data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"
-                data-aos-anchor-placement="bottom-bottom" src="assets/img/content/{{ project.image }}">
+                data-aos-anchor-placement="center-bottom" src="assets/img/content/{{ project.image }}">
             <div class="description-box">
                 <span class="project-title">{{ project.title }}</span>
                 <span class="project-stack">{{ project.stack }}</span>

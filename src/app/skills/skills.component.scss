@@ -6,8 +6,17 @@
   flex-direction: column;
 
   @media (min-width: 768px) {
-    padding: 0 0 20px 60px;
+    padding: 80px 0 100px 80px;
     flex-direction: row-reverse;
+  }
+  @media (min-width: 1024px) {
+    padding: 80px 0 100px 100px;
+  }
+  @media (min-width: 1200px) {
+    padding: 80px 0 100px 130px;
+  }
+  @media (min-width: 1400px) {
+    padding: 80px 0 100px 160px;
   }
 
   .bg-azure {
@@ -24,11 +33,21 @@
     p {
       display: none;
       color: #ffffff;
-      padding-right: 52px;
+      padding-right: 30px;
       text-align: end;
 
       @media (min-width: 768px) {
         display: block;
+        padding-right: 72px;
+      }
+      @media (min-width: 1024px) {
+        padding-right: 92px;
+      }
+      @media (min-width: 1200px) {
+        padding-right: 122px;
+      }
+      @media (min-width: 1400px) {
+        padding-right: 152px;
       }
     }
 
@@ -73,7 +92,16 @@
         background-color: var(--sub-text-blue);
 
         @media (min-width: 768px) {
-          width: 32px;
+          width: 52px;
+        }
+        @media (min-width: 1024px) {
+          width: 72px;
+        }
+        @media (min-width: 1200px) {
+          width: 102px;
+        }
+        @media (min-width: 1400px) {
+          width: 132px;
         }
       }
     }

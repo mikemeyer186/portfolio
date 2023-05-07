@@ -6,7 +6,16 @@
   justify-content: space-between;
 
   @media (min-width: 768px) {
-    padding: 0 0 100px 60px;
+    padding: 0 0 100px 80px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 0 100px 100px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 0 100px 130px;
+  }
+  @media (min-width: 1400px) {
+    padding: 0 0 100px 160px;
   }
 
   .about-text {
@@ -72,9 +81,18 @@
     }
 
     .rectangle {
-      width: 152px;
+      width: 102px;
       height: 2px;
       background-color: var(--sub-text-azure);
+      @media (min-width: 1024px) {
+        width: 142px;
+      }
+      @media (min-width: 1200px) {
+        width: 182px;
+      }
+      @media (min-width: 1400px) {
+        width: 202px;
+      }
     }
   }
 }
