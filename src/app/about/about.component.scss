@@ -26,6 +26,7 @@
       width: 55%;
       font-size: 0.9rem;
       text-align: justify;
+      padding-top: 100px;
     }
 
     .bg-blue {
@@ -53,8 +54,13 @@
         align-items: center;
 
         img {
+          flex-shrink: 0;
           height: 50px;
           object-fit: cover;
+          transition: all 225ms ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }

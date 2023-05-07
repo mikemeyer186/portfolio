@@ -170,6 +170,12 @@
       color: #ffffff;
       padding: 15px;
       font-size: 18px;
+      transition: all 225ms ease-in-out;
+      &:hover {
+        background-color: var(--sub-text-blue);
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
     }
   }
 
@@ -198,6 +204,12 @@
       img {
         width: 30px;
         height: 30px;
+        transition: all 225ms ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          --webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+          filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+        }
       }
     }
 
@@ -241,6 +253,11 @@
     font-weight: 300;
     gap: 10px;
     cursor: pointer;
+    transition: all 225ms ease-in-out;
+    &:hover {
+      transform: scale(1.05) rotate(90deg);
+      filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+    }
 
     @media (min-width: 768px) {
       display: flex;

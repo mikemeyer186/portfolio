@@ -100,10 +100,11 @@
         .lang {
           color: rgba(255, 255, 255, 0.5);
           cursor: pointer;
-          &:hover {
-            text-shadow: 0 0 10px #ffffff;
-          }
           transition: all 125ms ease-in-out;
+          &:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          }
         }
 
         .activeLanguage {
