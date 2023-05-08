@@ -51,8 +51,8 @@ export class ServiceService {
   }
 
   scrollToElement(element: string) {
-    this.setLegalOpacity();
     this.legalPageIsOpen = false;
+    this.setLegalOpacity();
 
     setTimeout(() => {
       this.smoothScrollAnimation(element);
@@ -93,10 +93,15 @@ export class ServiceService {
 
   setLegalOpacity() {
     const legalPage: HTMLElement | null = document.getElementById('legal-page');
-    if (this.legalPageIsOpen && legalPage) {
-      legalPage.classList.remove('legal-opacity-0');
-    } else if (!this.legalPageIsOpen && legalPage) {
-      legalPage.classList.add('legal-opacity-0');
+    const portfolioPage: HTMLElement | null =
+      document.getElementById('portfolio-page');
+
+    if (this.legalPageIsOpen && legalPage && portfolioPage) {
+      legalPage.classList.remove('opacity-0');
+      portfolioPage.classList.add('opacity-0');
+    } else if (!this.legalPageIsOpen && legalPage && portfolioPage) {
+      legalPage.classList.add('opacity-0');
+      portfolioPage.classList.remove('opacity-0');
     }
   }
 }

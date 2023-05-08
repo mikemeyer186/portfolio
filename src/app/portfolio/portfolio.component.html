@@ -1,6 +1,10 @@
-<app-main *ngIf="!this.service.legalPageIsOpen"></app-main>
-<app-about *ngIf="!this.service.legalPageIsOpen"></app-about>
-<app-skills *ngIf="!this.service.legalPageIsOpen"></app-skills>
-<app-projects *ngIf="!this.service.legalPageIsOpen"></app-projects>
-<app-contact *ngIf="!this.service.legalPageIsOpen"></app-contact>
-<app-legal *ngIf="this.service.legalPageIsOpen"></app-legal>
+<div id="portfolio-page">
+    <app-main *ngIf="!this.service.legalPageIsOpen"></app-main>
+    <app-about *ngIf="!this.service.legalPageIsOpen"></app-about>
+    <app-skills *ngIf="!this.service.legalPageIsOpen"></app-skills>
+    <app-projects *ngIf="!this.service.legalPageIsOpen"></app-projects>
+    <app-contact *ngIf="!this.service.legalPageIsOpen"></app-contact>
+</div>
+<div id="legal-page" class="legal-opacity-0">
+    <app-legal *ngIf="this.service.legalPageIsOpen"></app-legal>
+</div>

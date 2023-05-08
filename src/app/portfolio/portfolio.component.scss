@@ -1,0 +1,10 @@
+#legal-page,
+#portfolio-page {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+  transition: opacity 500ms ease-in-out;
+}

@@ -57,13 +57,3 @@
     background-color: var(--sub-text-blue);
   }
 }
-
-#legal-page {
-  opacity: 1;
-  transition: opacity 225ms ease-in-out;
-}
-
-.legal-opacity-0 {
-  opacity: 0 !important;
-  transition: opacity 225ms ease-in-out;
-}
