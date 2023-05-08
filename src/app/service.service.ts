@@ -138,7 +138,7 @@ export class ServiceService {
       );
       if (element) {
         const elementIsIntoView: boolean =
-          element.getBoundingClientRect().top < 80 &&
+          element.getBoundingClientRect().top < 100 &&
           element.getBoundingClientRect().bottom > 0;
         if (elementIsIntoView) {
           this.setActiveLink(this.pageElements[i]);
