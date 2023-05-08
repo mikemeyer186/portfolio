@@ -11,6 +11,14 @@ export class ServiceService {
     'assets/img/menu/menu_close_medium.png',
     'assets/img/menu/menu_close.png',
   ];
+  pageElements: string[] = [
+    'top',
+    'about',
+    'skills',
+    'portfolio',
+    'contact',
+    'legal',
+  ];
   currentMenuImage: string = this.menuImages[0];
   legalPageIsOpen: boolean = false;
   langEnglish: boolean = true;
@@ -18,6 +26,7 @@ export class ServiceService {
   constructor() {}
 
   openMenu() {
+    this.wichIdIsIntoView();
     let numberOfImage: number = 0;
     const openInterval = setInterval(() => {
       this.currentMenuImage = this.menuImages[numberOfImage];
@@ -53,10 +62,26 @@ export class ServiceService {
   scrollToElement(element: string) {
     this.legalPageIsOpen = false;
     this.setLegalOpacity();
+    this.setActiveLink(element);
 
     setTimeout(() => {
       this.smoothScrollAnimation(element);
     }, 50);
+  }
+
+  setActiveLink(element: string) {
+    this.removeActiveLink();
+    const menuLink = document.getElementById(element + '-link');
+    if (menuLink) {
+      menuLink.classList.add('activeLink');
+    }
+  }
+
+  removeActiveLink() {
+    const menuLinks = document.getElementsByClassName('menu-link');
+    for (let i = 0; i < menuLinks.length; i++) {
+      menuLinks[i].classList.remove('activeLink');
+    }
   }
 
   smoothScrollAnimation(element: string) {
@@ -78,6 +103,7 @@ export class ServiceService {
 
   openLegalPage() {
     this.legalPageIsOpen = true;
+    this.setActiveLink('legal');
     setTimeout(() => {
       this.setLegalOpacity();
       this.scrollToLegalTop();
@@ -102,6 +128,22 @@ export class ServiceService {
     } else if (!this.legalPageIsOpen && legalPage && portfolioPage) {
       legalPage.classList.add('opacity-0');
       portfolioPage.classList.remove('opacity-0');
+    }
+  }
+
+  wichIdIsIntoView() {
+    for (let i = 0; i < this.pageElements.length; i++) {
+      const element: HTMLElement | null = document.getElementById(
+        this.pageElements[i]
+      );
+      if (element) {
+        const elementIsIntoView: boolean =
+          element.getBoundingClientRect().top < 80 &&
+          element.getBoundingClientRect().bottom > 0;
+        if (elementIsIntoView) {
+          this.setActiveLink(this.pageElements[i]);
+        }
+      }
     }
   }
 }

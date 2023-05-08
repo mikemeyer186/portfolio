@@ -13,14 +13,22 @@
   padding: 130px 30px 100px 30px;
 
   ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    transition: all 225ms ease-in-out;
   }
 
-  a,
   li {
+    width: max-content;
+  }
+
+  span {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
@@ -61,6 +69,29 @@
       color: var(--sub-text-azure);
       transition: all 125ms ease-in-out;
       pointer-events: none;
+    }
+  }
+
+  .menu-link {
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: transparent;
+      margin-top: -15px;
+    }
+  }
+
+  .activeLink {
+    color: var(--sub-text-azure);
+    transition: all 125ms ease-in-out;
+    pointer-events: none;
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: var(--sub-text-blue);
+      margin-top: -15px;
     }
   }
 }

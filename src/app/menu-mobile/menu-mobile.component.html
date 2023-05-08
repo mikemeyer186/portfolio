@@ -1,12 +1,24 @@
 <div class="menu-mobile">
     <nav>
         <ul>
-            <li (click)="service.scrollToElement('top')" translate>Home</li>
-            <li (click)="service.scrollToElement('about')" translate>About me</li>
-            <li (click)="service.scrollToElement('skills')" translate>Skills</li>
-            <li (click)="service.scrollToElement('portfolio')" translate>Portfolio</li>
-            <li (click)="service.scrollToElement('contact')" translate>Contact</li>
-            <li (click)="service.openLegalPage()" translate>Legal notice</li>
+            <li (click)="service.scrollToElement('top')" translate>
+                <span id="top-link" class='menu-link'>Home</span>
+            </li>
+            <li (click)="service.scrollToElement('about')" translate>
+                <span id="about-link" class='menu-link'>About me</span>
+            </li>
+            <li (click)="service.scrollToElement('skills')" translate>
+                <span id="skills-link" class='menu-link'>Skills</span>
+            </li>
+            <li (click)="service.scrollToElement('portfolio')" translate>
+                <span id="portfolio-link" class='menu-link'>Portfolio</span>
+            </li>
+            <li (click)="service.scrollToElement('contact')" translate>
+                <span id="contact-link" class='menu-link'>Contact</span>
+            </li>
+            <li (click)="service.openLegalPage()" translate>
+                <span id="legal-link" class='menu-link'>Legal notice</span>
+            </li>
         </ul>
     </nav>
     <div class="langBox">
