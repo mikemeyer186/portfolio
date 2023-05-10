@@ -12,6 +12,10 @@
   overflow-y: auto;
   padding: 130px 30px 100px 30px;
 
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
