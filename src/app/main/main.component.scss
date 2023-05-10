@@ -19,6 +19,9 @@
     @media (min-height: 800px) and (min-width: 1300px) {
       height: 730px;
     }
+    @media (min-height: 900px) and (min-width: 1400px) {
+      height: 820px;
+    }
 
     .main-blue-bg {
       position: absolute;
@@ -71,6 +74,10 @@
       }
       @media (min-height: 800px) and (min-width: 1300px) {
         top: 480px;
+        height: 50%;
+      }
+      @media (min-height: 900px) and (min-width: 1400px) {
+        top: 530px;
         height: 50%;
       }
     }
@@ -205,7 +212,7 @@
       color: #ffffff;
       padding: 15px;
       font-size: 18px;
-      transition: all 225ms ease-in-out;
+      transition: all 125ms ease-in-out;
       &:hover {
         background-color: var(--sub-text-blue);
         transform: scale(1.05);
@@ -238,6 +245,9 @@
     @media (min-height: 800px) and (min-width: 1300px) {
       top: 680px;
     }
+    @media (min-height: 900px) and (min-width: 1400px) {
+      top: 780px;
+    }
 
     .main-footer-mid {
       display: flex;
@@ -248,7 +258,7 @@
       img {
         width: 30px;
         height: 30px;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
         &:hover {
           transform: scale(1.1);
           --webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
@@ -297,7 +307,7 @@
     font-weight: 300;
     gap: 10px;
     cursor: pointer;
-    transition: all 225ms ease-in-out;
+    transition: all 125ms ease-in-out;
     &:hover {
       transform: scale(1.05) rotate(90deg);
       filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));

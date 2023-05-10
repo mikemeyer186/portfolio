@@ -170,7 +170,18 @@
         color: #ffffff;
         outline: none;
         padding: 15px 60px 15px 25px;
-        transition: all 225ms ease-in-out;
+        caret-color: #ffffff;
+        transition: border 225ms ease-in-out;
+
+        &:-webkit-autofill {
+          box-shadow: 0 0 0px 40rem var(--main-bg-color) inset;
+          -webkit-text-fill-color: #ffffff;
+        }
+
+        &:-webkit-autofil:focus {
+          box-shadow: 0 0 0px 40rem var(--main-bg-color) inset;
+          -webkit-text-fill-color: #ffffff;
+        }
 
         &::placeholder {
           color: #ffffff;
@@ -215,12 +226,37 @@
         color: #ffffff;
         padding: 15px;
         font-size: 18px;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
         cursor: pointer;
+
         &:hover {
           background-color: var(--sub-text-blue);
           transform: scale(1.05);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        &:hover .load-spinner .load-spinner-inner {
+          background-color: var(--sub-text-blue);
+        }
+
+        .load-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          background: linear-gradient(90deg, #ffffff 0%, transparent 90%);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+
+          .load-spinner-inner {
+            z-index: 1;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: #00bee8;
+            transition: all 125ms ease-in-out;
+          }
         }
       }
 
@@ -232,25 +268,6 @@
           background-color: #00bee856;
           transform: scale(1);
           box-shadow: 0px 0px 0px transparent;
-        }
-      }
-
-      .load-spinner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        background: linear-gradient(90deg, #ffffff 0%, transparent 90%);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-
-        .load-spinner-inner {
-          z-index: 1;
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          background-color: #00bee8;
         }
       }
     }

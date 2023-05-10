@@ -71,7 +71,7 @@
         padding: 15px;
         font-size: 18px;
         cursor: pointer;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
         &:hover {
           background-color: var(--sub-text-blue);
           transform: scale(1.05);
@@ -194,7 +194,7 @@
       padding: 15px;
       font-size: 18px;
       cursor: pointer;
-      transition: all 225ms ease-in-out;
+      transition: all 125ms ease-in-out;
       &:hover {
         background-color: var(--sub-text-blue);
         transform: scale(1.05);

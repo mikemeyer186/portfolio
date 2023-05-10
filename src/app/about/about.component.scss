@@ -84,6 +84,19 @@
       border-radius: 50%;
       border: 2px solid var(--sub-text-azure);
       background-color: var(--main-bg-color);
+
+      @media (min-width: 1400px) {
+        width: 350px;
+        height: 350px;
+      }
+      @media (min-width: 1500px) {
+        width: 400px;
+        height: 400px;
+      }
+      @media (min-width: 1600px) {
+        width: 450px;
+        height: 450px;
+      }
     }
 
     .rectangle {
