@@ -140,11 +140,12 @@
       align-content: center;
       align-items: center;
       justify-content: center;
-      justify-items: flex-start;
+      justify-items: center;
 
       @media (min-width: 768px) {
         grid-template-columns: repeat(4, 1fr);
         row-gap: 60px;
+        justify-items: flex-start;
       }
 
       .skills-icons-box {

@@ -1,11 +1,11 @@
 {
   "About me": "About me",
-  "I am a passionated frontend developer with experience in developing responsive web applications. In my projects, I place a strong emphasis on modern user experience and clean code-design. As an IT enthusiast, I am open to the latest technologies and trends and always keep my knowledge up to date.": "I am a passionated frontend developer with experience in developing responsive web applications. In my projects, I place a strong emphasis on modern user experience and clean code-design. As an IT enthusiast, I am open to the latest technologies and trends and always keep my knowledge up to date.",
-  "Throughout my career as a business administrator with focus on IT, I gained extensive experience in data engineering and worked on numerous IT-projects where software was implemented. Therefore, I am very familiar with the customer requirements in software development.": "Throughout my career as a business administrator with focus on IT, I gained extensive experience in data engineering and worked on numerous IT-projects where software was implemented. Therefore, I am very familiar with the customer requirements in software development.",
-  "I acquired my developer skills at \"Developer Akademie\" in Munich. There, I gained experience in the frontend tech stack and the use of frameworks, libraries and APIs through many projects. Additionally, I learned an agile and team-oriented work approach based on the Scrum method.": "I acquired my developer skills at 'Developer Akademie' in Munich. There, I gained experience in the frontend tech stack and the use of frameworks, libraries and APIs through many projects. Additionally, I learned an agile and team-oriented work approach based on the Scrum method.",
+  "About_me_top_text": "I am a passionated frontend developer with experience in developing responsive web applications. In my projects, I place a strong emphasis on modern user experience and clean code-design. As an IT enthusiast, I am open to the latest technologies and trends and always keep my knowledge up to date.",
+  "About_me_first_text": "Throughout my career as a business administrator with focus on IT, I gained extensive experience in data engineering and worked on numerous IT-projects where software was implemented. Therefore, I am very familiar with the customer requirements in software development.",
+  "About_me_second_text": "I acquired my developer skills at 'Developer Akademie' in Munich. There, I gained experience in the frontend tech stack and the use of frameworks, libraries and APIs through many projects. Additionally, I learned an agile and team-oriented work approach based on the Scrum method.",
   "Contact": "Contact",
   "Got a problem to solve?": "Got a problem to solve?",
-  "Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
+  "Contact_me_text": "Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
   "Your name is required": "Your name is required",
   "Your email is required": "Your email is required",
   "Your message is empty": "Your message is empty",
@@ -16,7 +16,8 @@
   "Let's talk!": "Let's talk!",
   "Home": "Home",
   "Portfolio": "Portfolio",
-  "This page is a sample of my work - please feel free to try them out.": "This page is a sample of my work - please feel free to try them out.",
-  "I have gained experience in building projects with various front end technologies and concepts.": "I have gained experience in building projects with various front end technologies and concepts.",
-  "Get in touch": "Get in touch"
+  "Portfolio_text": "This page is a sample of my work - please feel free to try them out.",
+  "Skills_text": "I have gained experience in building projects with various front end technologies and concepts.",
+  "Get in touch": "Get in touch",
+  "Skills": "Skills"
 }
