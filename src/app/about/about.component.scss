@@ -8,14 +8,17 @@
   @media (min-width: 768px) {
     padding: 0 0 100px 80px;
   }
+
   @media (min-width: 1024px) {
-    padding: 0 0 100px 100px;
+    padding: 40px 0 100px 100px;
   }
+
   @media (min-width: 1200px) {
-    padding: 0 0 100px 130px;
+    padding: 60px 0 100px 130px;
   }
+
   @media (min-width: 1400px) {
-    padding: 0 0 100px 160px;
+    padding: 80px 0 100px 160px;
   }
 
   .about-text {
@@ -24,7 +27,7 @@
 
     @media (min-width: 768px) {
       width: 55%;
-      font-size: 0.9rem;
+      font-size: 1rem;
       text-align: justify;
       padding-top: 100px;
     }
@@ -58,6 +61,7 @@
           height: 50px;
           object-fit: cover;
           transition: all 225ms ease-in-out;
+
           &:hover {
             transform: scale(1.1);
           }
@@ -85,14 +89,26 @@
       border: 2px solid var(--sub-text-azure);
       background-color: var(--main-bg-color);
 
+      @media (max-width: 800px) {
+        width: 220px;
+        height: 220px;
+      }
+
+      @media (max-width: 900px) {
+        width: 250px;
+        height: 250px;
+      }
+
       @media (min-width: 1400px) {
         width: 350px;
         height: 350px;
       }
+
       @media (min-width: 1500px) {
         width: 400px;
         height: 400px;
       }
+
       @media (min-width: 1600px) {
         width: 450px;
         height: 450px;
@@ -103,12 +119,15 @@
       width: 72px;
       height: 2px;
       background-color: var(--sub-text-azure);
+
       @media (min-width: 1024px) {
         width: 92px;
       }
+
       @media (min-width: 1200px) {
         width: 122px;
       }
+
       @media (min-width: 1400px) {
         width: 152px;
       }

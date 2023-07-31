@@ -11,15 +11,16 @@
       <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" class="main-header-left">
         <span>I am</span>
       </div>
-      <div data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-sine" class="main-header-right">
-        <span class="main-header-right-name">Mike Meyer</span>
+      <div class="main-header-right">
+        <span data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-sine"
+          class="main-header-right-name">Mike Meyer</span>
         <div class="typed-inline">
           <span id="typed" class="main-header-right-sub"></span>
         </div>
       </div>
     </div>
 
-    <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" class="main-button">
+    <div data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-sine" class="main-button">
       <button (click)="service.scrollToElement('contact')" translate>
         Let's talk!
       </button>
@@ -40,7 +41,7 @@
         <div class="rectangle transparent"></div>
       </div>
       <div (click)="service.scrollToElement('about')" class="scroll-down-info">
-        <span>Scroll down</span>
+        <span class="scroll-down-info-text">Scroll down</span>
         <img src="assets/img/content/arrow_white.png" />
       </div>
     </div>
