@@ -108,7 +108,7 @@
   .main-header-left {
     color: #ffffff;
     transform: rotate(270deg);
-    font-size: 2rem;
+    font-size: 2.5rem;
     z-index: 3;
 
     @media (max-width: 400px) {
@@ -144,6 +144,7 @@
     align-items: flex-start;
     line-height: 2.7rem;
     z-index: 3;
+    transform: translateY(3px);
 
     @media (max-width: 400px) {
       line-height: 2rem;
@@ -163,6 +164,7 @@
     @media (min-width: 768px) {
       line-height: 5rem;
       width: 485px;
+      transform: translateY(7px);
     }
 
     @media (min-height: 200px) and (min-width: 768px) {
