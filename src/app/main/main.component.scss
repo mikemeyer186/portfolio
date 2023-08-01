@@ -196,6 +196,9 @@
       @media (min-width: 401px) and (max-width: 768px) {
         letter-spacing: 3px;
       }
+      @media (min-width: 769px) {
+        letter-spacing: 3px;
+      }
 
       @media (max-width: 300px) {
         font-size: 1.5rem;
@@ -214,7 +217,7 @@
       }
 
       @media (min-height: 600px) and (min-width: 768px) {
-        font-size: 5rem;
+        font-size: 4.8rem;
       }
     }
 
@@ -275,7 +278,7 @@
   .main-button {
     position: absolute;
     width: 100%;
-    top: 500px;
+    top: 490px;
     left: 0;
     z-index: 4;
     display: flex;
@@ -341,7 +344,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 600px;
+    top: 590px;
     z-index: 5;
 
     @media (min-width: 768px) {
