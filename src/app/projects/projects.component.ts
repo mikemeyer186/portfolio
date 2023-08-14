@@ -16,6 +16,17 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: 'Slack Clone',
+      stack: 'Angular | TypeScript | SCSS | Firebase',
+      description: {
+        en: 'A clone of the popular chat application Slack. Create channels, send messages, upload files and more.',
+        de: 'Ein Clone der beliebten Chat-Anwendung Slack. Erstelle Channels, sende Nachrichten, lade Dateien hoch und vieles mehr.',
+      },
+      image: 'ringoffire.png',
+      link_live: 'https://slackclone.mike-meyer.dev',
+      link_git: 'https://github.com/mikemeyer186/slackclone',
+    },
+    {
       title: 'Join',
       stack: 'Angular | TypeScript | HTML | CSS',
       description: {
@@ -36,17 +47,6 @@ export class ProjectsComponent {
       image: 'sharkie.png',
       link_live: 'https://sharkie.mike-meyer.dev/index.html',
       link_git: 'https://github.com/mikemeyer186/sharkie',
-    },
-    {
-      title: 'Ring of Fire',
-      stack: 'Angular | TypeScript | SCSS | Firebase',
-      description: {
-        en: 'Digital version of the popular card game. Play it with your friends on multiple devices at the same time.',
-        de: 'Digitale Version des beliebten Kartenspiels. Spiele es mit deinen Freunden online auf mehreren Geräten gleichzeitig.',
-      },
-      image: 'ringoffire.png',
-      link_live: 'https://ringoffire.mike-meyer.dev/',
-      link_git: 'https://github.com/mikemeyer186/ringoffire',
-    },
+    }
   ];
 }
