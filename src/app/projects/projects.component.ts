@@ -28,7 +28,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Join',
-      stack: 'Angular | TypeScript | HTML | CSS',
+      stack: 'JavaScript | HTML | CSS',
       description: {
         en: 'Task manager inspired by the Kanban system. Create and organize tasks by drag and drop, assign other users, set due dates and manage your contacts.',
         de: 'Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag and Drop, weise Aufgaben Benutzern zu, setze Fälligkeitsdaten und verwalte deine Kontakte.',
