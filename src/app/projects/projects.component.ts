@@ -16,6 +16,17 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: 'familyApp',
+      stack: 'React | JavaScript | SCSS | Firebase | Cloud Functions',
+      description: {
+        en: 'An organizer app with many features such as calendar, journal, shopping list and a trained AI assisstant. Connect with your family and share important data.',
+        de: 'Eine Organizer-App mit vielen Funktionen wie Kalender, Haushaltsbuch, Einkaufsliste und einem trainierten KI-Assistenten. Verbinde dich mit Familienmitgliedern und teile wichtige Daten.',
+      },
+      image: 'familyapp.png',
+      link_live: 'https://familyapp.mike-meyer.dev',
+      link_git: 'https://github.com/mikemeyer186/familyApp',
+    },
+    {
       title: 'Slack Clone',
       stack: 'Angular | TypeScript | SCSS | Firebase',
       description: {
