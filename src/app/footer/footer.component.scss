@@ -136,4 +136,15 @@
       color: var(--sub-text-blue);
     }
   }
+
+  a {
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      color: var(--sub-text-blue);
+    }
+  }
+  
 }
