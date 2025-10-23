@@ -25,7 +25,7 @@ export class ProjectsComponent {
       image: 'goslar-app-widget.png',
       link_live: 'https://tanken-in-goslar.de',
       link_git: 'https://github.com/mikemeyer186/goslar-app',
-      link_info: 'https://machmit.goslar.de/app',
+      link_info: 'https://machmit.goslar.de/wasapp',
     },
     {
       title: 'Butterhanne App',
