@@ -1,5 +1,11 @@
 {
   "prettier.printWidth": 120,
   "prettier.singleAttributePerLine": false,
-  "editor.defaultFormatter": null
+  "editor.defaultFormatter": null,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

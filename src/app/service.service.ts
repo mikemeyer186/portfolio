@@ -19,6 +19,17 @@ export class ServiceService {
     'contact',
     'legal',
   ];
+  contactDraft: {
+    sender: string;
+    email: string;
+    message: string;
+    consent: boolean;
+  } = {
+    sender: '',
+    email: '',
+    message: '',
+    consent: false,
+  };
   currentMenuImage: string = this.menuImages[0];
   legalPageIsOpen: boolean = false;
   langEnglish: boolean = true;
@@ -145,5 +156,24 @@ export class ServiceService {
         }
       }
     }
+  }
+
+  getContactDraft() {
+    return this.contactDraft;
+  }
+
+  updateContactDraft(
+    patch: Partial<{
+      sender: string;
+      email: string;
+      message: string;
+      consent: boolean;
+    }>
+  ) {
+    this.contactDraft = { ...this.contactDraft, ...patch };
+  }
+
+  clearContactDraft() {
+    this.contactDraft = { sender: '', email: '', message: '', consent: false };
   }
 }
