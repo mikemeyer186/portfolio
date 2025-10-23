@@ -19,8 +19,8 @@ export class ProjectsComponent {
       title: 'Goslar App Widget',
       stack: 'Fullstack | React | Node | Docker',
       description: {
-        en: 'A widget within the mobile Goslar app that displays the current fuel prices at gas stations in the Goslar district. The prices are continuously updated and provided to the app via an API endpoint. The Goslar app will be available in app stores at the end of 2025.',
-        de: 'Ein Widget innerhalb der mobilen Goslar App, dass die aktuellen Preise an den Tankstellen im Landkreis Goslar anzeigt. Die Preise werden kontinuierlich aktualisiert und über einen API-Endpunkt für die Appp bereitgestellt. Die Goslar App wird Ende 2025 in den App-Stores verfügbar sein.',
+        en: 'A widget within the Goslar App that displays the current fuel prices at gas stations in the Goslar district. The prices are continuously updated and provided to the app via an API endpoint. The Goslar App will be available in app stores at the end of 2025.',
+        de: 'Ein Widget innerhalb der Goslar App, das die aktuellen Preise an den Tankstellen im Landkreis Goslar anzeigt. Die Preise werden kontinuierlich aktualisiert und über einen API-Endpunkt für die App bereitgestellt. Die Goslar App wird Ende 2025 in den App-Stores verfügbar sein.',
       },
       image: 'goslar-app-widget.png',
       link_live: 'https://tanken-in-goslar.de',
