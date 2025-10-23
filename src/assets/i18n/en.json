@@ -1,8 +1,8 @@
 {
   "About me": "About me",
-  "About_me_top_text": "I am a passionated frontend developer with experience in developing responsive web applications. In my projects, I place a strong emphasis on modern user experience and clean code-design. As an IT enthusiast, I am open to the latest technologies and trends and always keep my knowledge up to date.",
+  "About_me_top_text": "I am a passionate web developer with extensive experience in building modern, responsive web applications. In my projects, I place great emphasis on an engaging user experience, clean code design, and sustainable software architecture. As an IT enthusiast, I continuously explore new technologies and trends to keep my knowledge up to date. In addition, I focus on DevSecOps and IT security to integrate security aspects early in the development process and ensure a holistic protection of applications.",
   "About_me_first_text": "Throughout my career as a business administrator with focus on IT, I gained extensive experience in data engineering and worked on numerous IT-projects where software was implemented. Therefore, I am very familiar with the customer requirements in software development.",
-  "About_me_second_text": "I acquired my developer skills at 'Developer Akademie' in Munich. There, I gained experience in the frontend tech stack and the use of frameworks, libraries and APIs through many projects. Additionally, I learned an agile and team-oriented work approach based on the Scrum method.",
+  "About_me_second_text": "I acquired my developer skills at the Developer Academy in Munich, where I learned the frontend tech stack through numerous projects and gained extensive experience working with frameworks, libraries, and APIs. During this time, I also developed an agile and team-oriented mindset based on the Scrum methodology. Afterwards, I continued my education at the Developer Academy as a DevSecOps specialist and deepened my knowledge in the field of IT security.",
   "Contact": "Contact",
   "Got a problem to solve?": "Got a problem to solve?",
   "Contact_me_text": "Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
@@ -17,7 +17,8 @@
   "Home": "Home",
   "Portfolio": "Portfolio",
   "Portfolio_text": "This page is a sample of my work - please feel free to try them out.",
-  "Skills_text": "I have gained experience in building projects with various front end technologies and concepts.",
+  "Skills_text": "I have gained experience in building projects with various front end technologies and concepts",
+  "Skills_text2": "In the field of DevSecOps, I have knowledge of the following technologies and concepts",
   "Get in touch": "Get in touch",
   "Skills": "Skills"
 }

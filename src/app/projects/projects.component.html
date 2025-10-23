@@ -9,7 +9,7 @@
 
     <div *ngFor="let project of projects; let odd = odd" class="projects-box">
         <div class="project-wrapper" [class.odd-child]="odd">
-            <img data-aos="flip-up" data-aos-duration="600" data-aos-easing="ease-in-sine"
+            <img data-aos="zoom-out-up" data-aos-duration="600" data-aos-easing="ease-in-sine"
                 data-aos-anchor-placement="center-bottom" src="assets/img/content/{{ project.image }}">
             <div class="description-box">
                 <span class="project-title">{{ project.title }}</span>
@@ -18,11 +18,21 @@
                     }}</span>
                 <span *ngIf="!this.service.langEnglish" class="project-description">{{ project.description.de
                     }}</span>
+                <span *ngIf="project.link_info" class="project-description">
+                    Info: <a href="{{ project.link_info }}" target="_blank">{{ project.link_info }}</a>
+                </span>
                 <div class="button-box">
-                    <a href="{{ project.link_live }}" target="_blank"><button class="button-blue button-effect">Live
-                            test</button></a>
-                    <a href="{{ project.link_git }}" target="_blank"><button
-                            class="button-dark button-effect">Github</button></a>
+                    <div *ngIf="project.link_live">
+                        <a href="{{ project.link_live }}" target="_blank"><button class="button-blue button-effect">Live
+                                test</button></a>
+                    </div>
+                    <div *ngIf="project.link_git">
+                        <a href="{{ project.link_git }}" target="_blank"><button
+                                class="button-dark button-effect">Github</button></a>
+                    </div>
+                    <div *ngIf="!project.link_git">
+                        <button class="button-dark button-no-effect">Private Repository</button>
+                    </div>
                 </div>
             </div>
         </div>

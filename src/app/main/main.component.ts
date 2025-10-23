@@ -14,7 +14,12 @@ export class MainComponent {
   ngOnInit() {
     AOS.init();
     const typed = new Typed('#typed', {
-      strings: ['Frontend Developer', 'Web Developer', 'Software Developer'],
+      strings: [
+        'Web Developer',
+        'DevSecOps Specialist',
+        'IT-Security Expert',
+        'Tech Enthusiast',
+      ],
       typeSpeed: 90,
       backSpeed: 30,
       backDelay: 2000,

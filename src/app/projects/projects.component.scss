@@ -115,8 +115,10 @@
       }
 
       img {
-        width: 390px;
-        object-fit: cover;
+        max-width: 390px;
+        max-height: 600px;
+        object-fit: contain;
+        margin-bottom: 12px;
 
         @media (max-width: 400px) {
           width: 100%;
@@ -166,6 +168,10 @@
           color: #ffffff;
           text-align: center;
           width: 100%;
+
+          a {
+            color: #ffffff;
+          }
         }
 
         .button-box {
@@ -209,6 +215,23 @@
             transition: all 125ms ease-in-out;
             &:hover {
               background-color: var(--sub-text-azure);
+            }
+          }
+
+          .button-no-effect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 133px;
+            height: 49px;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 125ms ease-in-out;
+            &:hover {
+              cursor: not-allowed;
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "About me": "Über mich",
-  "About_me_top_text": "Ich bin ein leidenschaftlicher Frontend-Developer mit Erfahrung in der Entwicklung von responsiven Web-Apps. Bei meinen Projekten lege ich großen Wert auf eine moderne User Experience und ein sauberes Code-Design. Als IT-Enthusiast bin ich offen für die neuesten Technologien und Trends und halte mein Wissen immer auf dem neuesten Stand.",
+  "About_me_top_text": "Ich bin ein leidenschaftlicher Web-Developer mit umfassender Erfahrung in der Entwicklung moderner, responsiver Web-Apps. In meinen Projekten lege ich großen Wert auf eine ansprechende User Experience, sauberes Code-Design und nachhaltige Softwarearchitektur. Als IT-Enthusiast verfolge ich kontinuierlich neue Technologien und Trends, um mein Wissen stets auf dem neuesten Stand zu halten. Darüber hinaus beschäftige ich mich intensiv mit den Themen DevSecOps und IT Security, um Sicherheitsaspekte bereits frühzeitig in den Entwicklungsprozess zu integrieren und Anwendungen ganzheitlich abzusichern.",
   "About_me_first_text": "Während meiner beruflichen Laufbahn als Fachwirt mit Schwerpunkt IT, habe ich umfangreiche Erfahrungen im Bereich Data Engineering gesammelt und an zahlreichen IT-Projekten mitgearbeitet, in denen Software implementiert wurde. Daher bin ich mit den Kundenanforderungen in der Softwareentwicklung bestens vertraut.",
-  "About_me_second_text": "Meine Entwickler-Skills habe ich an der Developer Akademie in München erworben. Dort lernte ich in vielen Projekten den Frontend Tech-Stack und sammelte intensive Erfahrungen im Einsatz von Frameworks, Libraries und APIs. Dabei eignete ich mir auch eine agile und teamorientierte Arbeitsweise auf Basis der Scrum-Methode an.",
+  "About_me_second_text": "Meine Entwickler-Skills habe ich an der Developer Akademie in München erworben. Dort lernte ich in vielen Projekten den Frontend Tech-Stack und sammelte intensive Erfahrungen im Einsatz von Frameworks, Libraries und APIs. Dabei eignete ich mir auch eine agile und teamorientierte Arbeitsweise auf Basis der Scrum-Methode an. Anschließend bildete ich mich bei der Developer Akademie als DevSecOps Spezialist weiter und vertiefte mein Wissen im Bereich IT-Security.",
   "Contact": "Kontakt",
   "Got a problem to solve?": "Wie kann ich unterstützen?",
   "Contact_me_text": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
@@ -17,7 +17,8 @@
   "Home": "Start",
   "Portfolio": "Portfolio",
   "Portfolio_text": "Hier sind einige Beispiele meiner Projekte - probieren Sie sie gerne aus.",
-  "Skills_text": "Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+  "Skills_text": "Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt",
+  "Skills_text2": "Im Bereich DevSecOps verfüge ich über Kenntnisse in folgenden Technologien und Konzepten",
   "Get in touch": "Kontaktieren",
   "Skills": "Erfahrung"
 }

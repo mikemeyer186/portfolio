@@ -16,6 +16,27 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: 'Goslar App Widget',
+      stack: 'Fullstack | React | Node | Docker',
+      description: {
+        en: 'A widget within the mobile Goslar app that displays the current fuel prices at gas stations in the Goslar district. The prices are continuously updated and provided to the app via an API endpoint. The Goslar app will be available in app stores at the end of 2025.',
+        de: 'Ein Widget innerhalb der mobilen Goslar App, dass die aktuellen Preise an den Tankstellen im Landkreis Goslar anzeigt. Die Preise werden kontinuierlich aktualisiert und über einen API-Endpunkt für die Appp bereitgestellt. Die Goslar App wird Ende 2025 in den App-Stores verfügbar sein.',
+      },
+      image: 'goslar-app-widget.png',
+      link_live: 'https://tanken-in-goslar.de',
+      link_git: 'https://github.com/mikemeyer186/goslar-app',
+      link_info: 'https://machmit.goslar.de/app',
+    },
+    {
+      title: 'Butterhanne App',
+      stack: 'Angular | PWA | Firebase | Messaging',
+      description: {
+        en: 'An employee app for a restaurant business featuring a shift schedule, vacation requests, news, and chat functionality. The app is used by around 80 employees and additional features are planned.',
+        de: 'Eine Mitarbeiter-App für einen Gastronomie-Betrieb mit Schichtplan, Urlaubsanträgen, News und Chatfunktion. Die App wird von ca. 80 Mitarbeitern genutzt und weitere Funktionen sind in Planung.',
+      },
+      image: 'butterhanne.png',
+    },
+    {
       title: 'familyApp',
       stack: 'React | JavaScript | SCSS | Firebase | Cloud Functions',
       description: {
@@ -37,27 +58,5 @@ export class ProjectsComponent {
       link_live: 'https://slackclone.mike-meyer.dev',
       link_git: 'https://github.com/mikemeyer186/slackclone',
     },
-    {
-      title: 'Join',
-      stack: 'JavaScript | HTML | CSS',
-      description: {
-        en: 'Task manager inspired by the Kanban system. Create and organize tasks by drag and drop, assign other users, set due dates and manage your contacts.',
-        de: 'Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag and Drop, weise Aufgaben Benutzern zu, setze Fälligkeitsdaten und verwalte deine Kontakte.',
-      },
-      image: 'join.png',
-      link_live: 'https://join.mike-meyer.dev/index.html',
-      link_git: 'https://github.com/mikemeyer186/join',
-    },
-    {
-      title: 'Sharkie',
-      stack: 'JavaScript | HTML | CSS | OOP',
-      description: {
-        en: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
-        de: 'Ein einfaches Jump-and-Run Spiel, dass auf einem objektorientierten Ansatz basiert. Hilf Sharkie dabei, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.',
-      },
-      image: 'sharkie.png',
-      link_live: 'https://sharkie.mike-meyer.dev/index.html',
-      link_git: 'https://github.com/mikemeyer186/sharkie',
-    }
   ];
 }
