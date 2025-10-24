@@ -16,7 +16,7 @@ export class MainComponent {
     const typed = new Typed('#typed', {
       strings: [
         'Web Developer',
-        'DevSecOps Specialist',
+        'DevOps Specialist',
         'IT-Security Expert',
         'Tech Enthusiast',
       ],

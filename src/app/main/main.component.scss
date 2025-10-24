@@ -102,12 +102,11 @@
       right: 0;
       justify-content: center;
     }
-
   }
 
   .main-header-left {
     color: #ffffff;
-    transform: rotate(270deg);
+    transform: rotate(270deg) translateY(8px);
     font-size: 2.5rem;
     white-space: nowrap;
     z-index: 3;
@@ -146,6 +145,7 @@
     line-height: 2.7rem;
     z-index: 3;
     transform: translateY(3px);
+    flex-shrink: 0;
 
     @media (max-width: 400px) {
       line-height: 2rem;
@@ -273,7 +273,6 @@
       }
     }
   }
-
 
   .main-button {
     position: absolute;

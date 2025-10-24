@@ -124,17 +124,26 @@
         .form-consent {
           display: flex;
           align-items: center;
+          justify-content: flex-start;
           margin-bottom: 40px;
 
-          input {
-            height: 20px;
-            width: 20px;
+          .checkbox {
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex-shrink: 0;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
           }
 
-          span {
+          .text {
             font-size: 0.8rem;
-            margin-left: 12px;
+            margin-left: 8px;
+            padding-right: 20px;
 
             .link {
               margin-left: 0px;

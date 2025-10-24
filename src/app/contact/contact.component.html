@@ -64,14 +64,16 @@
 
                 <div class="form-box">
                     <div class="form-consent">
-                        <input type="checkbox" formControlName="consent" id="formConsent">
-                        <span *ngIf="!this.service.langEnglish">
+                        <div class="checkbox">
+                            <input type="checkbox" formControlName="consent" id="formConsent">
+                        </div>
+                        <span class="text" *ngIf="!this.service.langEnglish">
                             Ich bestätige, dass ich die <span class="link"
                                 (click)="service.openLegalPage()">Datenschutzerklärung</span> gelesen habe und mit der
                             Verarbeitung
                             meiner personenbezogenen Daten einverstanden bin.
                         </span>
-                        <span *ngIf="this.service.langEnglish">
+                        <span class="text" *ngIf="this.service.langEnglish">
                             I confirm that I have read the <span class="link" (click)="service.openLegalPage()">Privacy
                                 Policy</span> and agree to the processing of my personal
                             data.
