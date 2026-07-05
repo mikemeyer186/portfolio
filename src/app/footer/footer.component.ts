@@ -3,6 +3,7 @@ import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-footer',
+  standalone: false,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })

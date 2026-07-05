@@ -4,6 +4,7 @@ import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-skills',
+  standalone: false,
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })

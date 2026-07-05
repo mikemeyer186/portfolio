@@ -15,12 +15,12 @@ import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideTranslateHttpLoader, TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function HttpLoaderFactory() {
+  return new TranslateHttpLoader();
 }
 
 @NgModule({
@@ -41,17 +41,21 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
+      fallbackLang: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
       },
     }),
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(),
+    ...provideTranslateHttpLoader({
+      prefix: './assets/i18n/',
+      suffix: '.json',
+    }),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

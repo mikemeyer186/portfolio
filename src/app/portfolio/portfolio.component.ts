@@ -3,6 +3,7 @@ import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-portfolio',
+  standalone: false,
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })

@@ -6,6 +6,7 @@ import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-contact',
+  standalone: false,
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
