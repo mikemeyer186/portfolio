@@ -16,16 +16,18 @@ export class MainComponent {
     AOS.init();
     const typed = new Typed('#typed', {
       strings: [
-        'Web Developer',
+        'Software Developer',
         'DevOps Specialist',
         'IT-Security Expert',
-        'Tech Enthusiast',
+        'AI & Tech Enthusiast',
+        'Data Engineer',
       ],
       typeSpeed: 90,
       backSpeed: 30,
       backDelay: 2000,
       cursorChar: '|',
       autoInsertCss: true,
+      contentType: 'null',
       loop: true,
     });
   }
