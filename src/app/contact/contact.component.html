@@ -16,9 +16,9 @@
             <fieldset [disabled]="this.sendAnimation">
                 <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['sender'] as sender">
-                        <input *ngIf="this.service.langEnglish" formControlName="sender" name="name" type="text"
+                        <input *ngIf="service.langEnglish()" formControlName="sender" name="name" type="text"
                             placeholder="Your name">
-                        <input *ngIf="!this.service.langEnglish" formControlName="sender" name="name" type="text"
+                        <input *ngIf="!service.langEnglish()" formControlName="sender" name="name" type="text"
                             placeholder="Ihr Name">
                         <ng-container *ngIf="sender.invalid && sender.dirty">
                             <span class="error-message" translate>Your name is required</span>
@@ -32,9 +32,9 @@
 
                 <div data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['email'] as email">
-                        <input *ngIf="this.service.langEnglish" formControlName="email" name="email" type="email"
+                        <input *ngIf="service.langEnglish()" formControlName="email" name="email" type="email"
                             placeholder="Your email">
-                        <input *ngIf="!this.service.langEnglish" formControlName="email" name="email" type="email"
+                        <input *ngIf="!service.langEnglish()" formControlName="email" name="email" type="email"
                             placeholder="Ihre Email-Adresse">
                         <ng-container *ngIf="email.invalid && email.dirty">
                             <span class="error-message" translate>Your email is required</span>
@@ -48,9 +48,9 @@
 
                 <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" class="form-box">
                     <ng-container *ngIf="contactForm.controls['message'] as message">
-                        <textarea *ngIf="this.service.langEnglish" formControlName="message" name="message" cols="30"
+                        <textarea *ngIf="service.langEnglish()" formControlName="message" name="message" cols="30"
                             rows="30" placeholder="Your message"></textarea>
-                        <textarea *ngIf="!this.service.langEnglish" formControlName="message" name="message" cols="30"
+                        <textarea *ngIf="!service.langEnglish()" formControlName="message" name="message" cols="30"
                             rows="30" placeholder="Ihre Nachricht"></textarea>
                         <ng-container *ngIf="message.invalid && message.dirty">
                             <span class="error-message" translate>Your message is empty</span>
@@ -67,13 +67,13 @@
                         <div class="checkbox">
                             <input type="checkbox" formControlName="consent" id="formConsent">
                         </div>
-                        <label for="formConsent" class="text" *ngIf="!this.service.langEnglish">
+                        <label for="formConsent" class="text" *ngIf="!service.langEnglish()">
                             Ich bestätige, dass ich die <span class="link"
                                 (click)="service.openLegalPage()">Datenschutzerklärung</span> gelesen habe und mit der
                             Verarbeitung
                             meiner personenbezogenen Daten einverstanden bin.
                         </label>
-                        <label for="formConsent" class="text" *ngIf="this.service.langEnglish">
+                        <label for="formConsent" class="text" *ngIf="service.langEnglish()">
                             I confirm that I have read the <span class="link" (click)="service.openLegalPage()">Privacy
                                 Policy</span> and agree to the processing of my personal
                             data.

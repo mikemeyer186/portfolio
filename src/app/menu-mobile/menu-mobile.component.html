@@ -2,28 +2,28 @@
     <nav>
         <ul>
             <li (click)="service.scrollToElement('top')">
-                <span id="top-link" class='menu-link' translate>Home</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'top'" translate>Home</span>
             </li>
             <li (click)="service.scrollToElement('about')">
-                <span id="about-link" class='menu-link' translate>About me</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'about'" translate>About me</span>
             </li>
             <li (click)="service.scrollToElement('skills')">
-                <span id="skills-link" class='menu-link' translate>Skills</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'skills'" translate>Skills</span>
             </li>
             <li (click)="service.scrollToElement('portfolio')">
-                <span id="portfolio-link" class='menu-link' translate>Portfolio</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'portfolio'" translate>Portfolio</span>
             </li>
             <li (click)="service.scrollToElement('contact')">
-                <span id="contact-link" class='menu-link' translate>Contact</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'contact'" translate>Contact</span>
             </li>
             <li (click)="service.openLegalPage()">
-                <span id="legal-link" class='menu-link' translate>Legal notice</span>
+                <span class="menu-link" [class.activeLink]="service.activeLink() === 'legal'" translate>Legal notice</span>
             </li>
         </ul>
     </nav>
     <div class="langBox">
-        <span (click)="changeLanguage('en')" class="lang" [class.activeLanguage]="this.service.langEnglish">EN</span>
+        <span (click)="changeLanguage('en')" class="lang" [class.activeLanguage]="service.langEnglish()">EN</span>
         <span>|</span>
-        <span (click)="changeLanguage('de')" class="lang" [class.activeLanguage]="!this.service.langEnglish">DE</span>
+        <span (click)="changeLanguage('de')" class="lang" [class.activeLanguage]="!service.langEnglish()">DE</span>
     </div>
 </div>

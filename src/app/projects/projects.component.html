@@ -14,9 +14,9 @@
             <div class="description-box">
                 <span class="project-title">{{ project.title }}</span>
                 <span class="project-stack">{{ project.stack }}</span>
-                <span *ngIf="this.service.langEnglish" class="project-description">{{ project.description.en
+                <span *ngIf="service.langEnglish()" class="project-description">{{ project.description.en
                     }}</span>
-                <span *ngIf="!this.service.langEnglish" class="project-description">{{ project.description.de
+                <span *ngIf="!service.langEnglish()" class="project-description">{{ project.description.de
                     }}</span>
                 <span *ngIf="project.link_info" class="project-description">
                     Info: <a href="{{ project.link_info }}" target="_blank">{{ project.link_info }}</a>

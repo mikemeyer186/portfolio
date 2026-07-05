@@ -1,10 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal, effect } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServiceService {
-  menuIsOpen: boolean = false;
   menuImages: string[] = [
     'assets/img/menu/menu_default.png',
     'assets/img/menu/menu_transition.png',
@@ -30,79 +29,87 @@ export class ServiceService {
     message: '',
     consent: false,
   };
-  currentMenuImage: string = this.menuImages[0];
-  legalPageIsOpen: boolean = false;
-  langEnglish: boolean = true;
 
-  constructor() {}
+  // Reactive UI state — signals so the view always re-renders when these change,
+  // independent of change-detection timing.
+  menuIsOpen = signal(false);
+  currentMenuImage = signal(this.menuImages[0]);
+  legalPageIsOpen = signal(false);
+  langEnglish = signal(true);
+  activeLink = signal('top');
+
+  private menuIconInterval?: ReturnType<typeof setInterval>;
+
+  constructor() {
+    // Single source of truth for the background scroll-lock: the page is locked
+    // exactly while the mobile menu is open.
+    effect(() => {
+      const locked = this.menuIsOpen();
+      document.documentElement.classList.toggle('no-scroll', locked);
+      document.body.classList.toggle('no-scroll', locked);
+    });
+  }
 
   openMenu() {
     this.wichIdIsIntoView();
-    let numberOfImage: number = 0;
-    const openInterval = setInterval(() => {
-      this.currentMenuImage = this.menuImages[numberOfImage];
-      numberOfImage++;
-      if (numberOfImage === this.menuImages.length) {
-        clearInterval(openInterval);
-        this.menuIsOpen = true;
-        document.body.classList.add('no-scroll');
-      }
-    }, 75);
+    this.menuIsOpen.set(true);
+    this.animateMenuIcon('open');
   }
 
   closeMenu() {
-    let numberOfImage: number = this.menuImages.length - 1;
-    const closeInterval = setInterval(() => {
-      this.currentMenuImage = this.menuImages[numberOfImage];
-      numberOfImage--;
-      if (numberOfImage === -1) {
-        clearInterval(closeInterval);
-        this.menuIsOpen = false;
-        document.body.classList.remove('no-scroll');
+    if (!this.menuIsOpen()) {
+      return;
+    }
+    this.menuIsOpen.set(false);
+    this.animateMenuIcon('close');
+  }
+
+  private animateMenuIcon(direction: 'open' | 'close') {
+    if (this.menuIconInterval) {
+      clearInterval(this.menuIconInterval);
+    }
+    const last = this.menuImages.length - 1;
+    const target = direction === 'open' ? last : 0;
+    const step = direction === 'open' ? 1 : -1;
+    let i = direction === 'open' ? 0 : last;
+    this.currentMenuImage.set(this.menuImages[i]);
+    this.menuIconInterval = setInterval(() => {
+      if (i === target) {
+        clearInterval(this.menuIconInterval);
+        this.menuIconInterval = undefined;
+        return;
       }
+      i += step;
+      this.currentMenuImage.set(this.menuImages[i]);
     }, 75);
   }
 
   scrollToTop() {
-    this.legalPageIsOpen = false;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.legalPageIsOpen.set(false);
+    this.activeLink.set('top');
     this.closeMenu();
-    document.body.classList.remove('no-scroll');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   scrollToElement(element: string) {
-    this.legalPageIsOpen = false;
-    this.setLegalOpacity();
-    this.setActiveLink(element);
-
+    this.legalPageIsOpen.set(false);
+    this.activeLink.set(element);
+    this.closeMenu();
     setTimeout(() => {
-      this.smoothScrollAnimation(element);
+      this.scrollIntoView(document.getElementById(element), 'smooth');
     }, 50);
   }
 
-  setActiveLink(element: string) {
-    this.removeActiveLink();
-    const menuLink = document.getElementById(element + '-link');
-    if (menuLink) {
-      menuLink.classList.add('activeLink');
-    }
-  }
-
-  removeActiveLink() {
-    const menuLinks = document.getElementsByClassName('menu-link');
-    for (let i = 0; i < menuLinks.length; i++) {
-      menuLinks[i].classList.remove('activeLink');
-    }
-  }
-
-  smoothScrollAnimation(element: string) {
-    const elementToScroll = document.getElementById(element);
-    document.body.classList.remove('no-scroll');
+  openLegalPage() {
+    this.legalPageIsOpen.set(true);
+    this.activeLink.set('legal');
     this.closeMenu();
-    this.scrollIntoView(elementToScroll, 'smooth');
+    setTimeout(() => {
+      this.scrollIntoView(document.getElementById('legal'), 'auto');
+    }, 50);
   }
 
-  scrollIntoView(element: any, behavior: string) {
+  scrollIntoView(element: HTMLElement | null, behavior: ScrollBehavior) {
     if (element) {
       element.scrollIntoView({
         behavior: behavior,
@@ -112,47 +119,13 @@ export class ServiceService {
     }
   }
 
-  openLegalPage() {
-    this.legalPageIsOpen = true;
-    this.setActiveLink('legal');
-    setTimeout(() => {
-      this.setLegalOpacity();
-      this.scrollToLegalTop();
-    }, 50);
-  }
-
-  scrollToLegalTop() {
-    const legalElement = document.getElementById('legal');
-    document.body.classList.remove('no-scroll');
-    this.closeMenu();
-    this.scrollIntoView(legalElement, 'auto');
-  }
-
-  setLegalOpacity() {
-    const legalPage: HTMLElement | null = document.getElementById('legal-page');
-    const portfolioPage: HTMLElement | null =
-      document.getElementById('portfolio-page');
-
-    if (this.legalPageIsOpen && legalPage && portfolioPage) {
-      legalPage.classList.remove('opacity-0');
-      portfolioPage.classList.add('opacity-0');
-    } else if (!this.legalPageIsOpen && legalPage && portfolioPage) {
-      legalPage.classList.add('opacity-0');
-      portfolioPage.classList.remove('opacity-0');
-    }
-  }
-
   wichIdIsIntoView() {
-    for (let i = 0; i < this.pageElements.length; i++) {
-      const element: HTMLElement | null = document.getElementById(
-        this.pageElements[i]
-      );
+    for (const id of this.pageElements) {
+      const element = document.getElementById(id);
       if (element) {
-        const elementIsIntoView: boolean =
-          element.getBoundingClientRect().top < 100 &&
-          element.getBoundingClientRect().bottom > 0;
-        if (elementIsIntoView) {
-          this.setActiveLink(this.pageElements[i]);
+        const rect = element.getBoundingClientRect();
+        if (rect.top < 100 && rect.bottom > 0) {
+          this.activeLink.set(id);
         }
       }
     }

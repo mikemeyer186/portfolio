@@ -48,16 +48,5 @@ export class ProjectsComponent {
       link_live: 'https://familyapp.mike-meyer.dev',
       link_git: 'https://github.com/mikemeyer186/familyApp',
     },
-    {
-      title: 'Slack Clone',
-      stack: 'Angular | TypeScript | SCSS | Firebase',
-      description: {
-        en: 'A clone of the popular chat application Slack. Create channels, send messages, upload files and more.',
-        de: 'Ein Clone der beliebten Chat-Anwendung Slack. Erstelle Channels, sende Nachrichten, lade Dateien hoch und vieles mehr.',
-      },
-      image: 'slackclone.png',
-      link_live: 'https://slackclone.mike-meyer.dev',
-      link_git: 'https://github.com/mikemeyer186/slackclone',
-    },
   ];
 }

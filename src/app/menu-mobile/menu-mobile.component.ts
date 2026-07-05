@@ -15,11 +15,7 @@ export class MenuMobileComponent {
   ) {}
 
   changeLanguage(lang: string) {
-    if (lang == 'en') {
-      this.service.langEnglish = true;
-    } else {
-      this.service.langEnglish = false;
-    }
+    this.service.langEnglish.set(lang === 'en');
     this.translate.use(lang);
   }
 }
