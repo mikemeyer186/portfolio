@@ -45,7 +45,6 @@ export class ProjectsComponent {
         de: 'Eine Organizer-App (PWA) mit vielen Funktionen wie Kalender, Haushaltsbuch, Einkaufsliste und einem trainierten KI-Assistenten. Verbinde dich mit Familienmitgliedern und teile wichtige Daten.',
       },
       image: 'familyapp.png',
-      link_live: 'https://familyapp.mike-meyer.dev',
       link_git: 'https://github.com/mikemeyer186/familyApp',
     },
   ];
